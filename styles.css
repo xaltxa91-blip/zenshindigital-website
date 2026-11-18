@@ -1672,3 +1672,10 @@ em { font-style: italic; }
 }
 .ai-text .section-sub { margin-inline: 0; }
 .about-pillar strong { white-space: nowrap; }
+
+.about-founder { display: flex; align-items: center; gap: 1rem; text-align: left; margin-bottom: .5rem; }
+.about-founder .about-photo { width: 76px; height: 76px; margin: 0; border-width: 2px; flex-shrink: 0; }
+.about-founder .about-photo-role { margin: 0 0 .1rem; font-family: var(--mono); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: #22d3ee; }
+.about-founder .about-photo-name { font-size: 1.3rem; }
+.about-li { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.5rem; }
+.about-li svg { width: 16px; height: 16px; }
