@@ -155,3 +155,31 @@ body.light .meta { color: #6b7080; }
 body.light .back { color: #4f46e5; }
 body.light .sources a, body.light .content a { color: #4f46e5; }
 body.light .shot figcaption { color: #6b7080; }
+
+/* channel (service) pages — dark */
+.svc-hero { padding: 80px 0 40px; max-width: 760px; }
+.svc-hero h1 { font-family: var(--display); font-size: clamp(2.4rem, 7vw, 4rem); line-height: 1.05; letter-spacing: -.035em; margin: .6rem 0 1rem; }
+.svc-hero h1 em { font-style: italic; background: linear-gradient(90deg, #818cf8, #22d3ee); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.svc-hero p { color: var(--muted); font-size: 1.125rem; margin: 0 0 1.75rem; }
+.svc-sec { margin-top: 64px; }
+.svc-sec h2 { font-family: var(--display); font-size: clamp(1.5rem, 4vw, 2rem); letter-spacing: -.02em; margin: 0 0 1.25rem; }
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.svc-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 22px 24px; }
+.svc-card h3 { font-family: var(--display); font-size: 1.1rem; margin: 0 0 .5rem; }
+.svc-card p { color: var(--muted); font-size: .95rem; margin: 0; line-height: 1.6; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: s; }
+.steps li { counter-increment: s; border-top: 2px solid var(--accent); padding-top: 14px; }
+.steps li::before { content: "0" counter(s); font-family: var(--mono); font-size: .75rem; color: var(--cyan); display: block; margin-bottom: .4rem; }
+.steps strong { display: block; font-family: var(--display); font-size: 1.1rem; margin-bottom: .3rem; }
+.steps span { color: var(--muted); font-size: .95rem; }
+.news .more-item time { display: block; font-size: .8rem; color: var(--dim); font-weight: 400; margin-bottom: .2rem; }
+.news .empty { color: var(--muted); }
+.svcp .all { display: inline-block; margin-top: 1rem; font-weight: 600; text-decoration: none; }
+.svcp .faq details { border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin: .6rem 0; background: var(--card); }
+.svcp .faq summary { cursor: pointer; font-weight: 600; }
+.svcp .faq p { color: var(--muted); margin: .6rem 0 0; }
+.svcp .other { margin-top: 2.5rem; color: var(--dim); font-size: .95rem; text-align: center; }
+.svcp .other a { color: var(--muted); }
+.svc-link { display: block; margin-top: 2.5rem; padding: 16px 20px; border-radius: 14px; border: 1px solid rgba(79,70,229,.35); background: rgba(99,102,241,.07); font-weight: 600; text-decoration: none; }
+@media (max-width: 900px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } .steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .svc-grid, .steps { grid-template-columns: 1fr; } .svc-hero { padding: 56px 0 24px; } }

@@ -6,6 +6,7 @@ import sys, os, shutil, json, html
 from datetime import date
 sys.path.insert(0, os.path.dirname(__file__))
 from posts import POSTS
+from channels import CHANNELS
 
 SITE = "https://zenshindigital.com"
 out = sys.argv[1]
@@ -28,7 +29,7 @@ FAVICON = """<link rel="icon" type="image/svg+xml" href="/assets/brand/zenshin-i
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />"""
 
-def head(title, desc, url, image=None, extra=""):
+def head(title, desc, url, image=None, extra="", body_class="light", og_type="article"):
     og_img = f'<meta property="og:image" content="{SITE}/blog/img/{image}" />' if image else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -41,7 +42,7 @@ def head(title, desc, url, image=None, extra=""):
   <meta property="og:title" content="{e(title)}" />
   <meta property="og:description" content="{e(desc)}" />
   <meta property="og:url" content="{url}" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="{og_type}" />
   {og_img}
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +52,7 @@ def head(title, desc, url, image=None, extra=""):
   {FAVICON}
   {extra}
 </head>
-<body class="light">
+<body class="{body_class}">
 <header class="bnav"><div class="bwrap bnav-in">
   <a href="/" class="logo"><img class="logo-i" src="/assets/brand/zenshin-icon.svg" alt="" width="32" height="32">Zenshin Digital</a>
   <nav><a href="/blog/">Blog</a><a href="/#about">About</a><a href="mailto:hello@zenshindigital.com?subject=Strategy%20call" class="btn">Book a Call</a></nav>
@@ -105,6 +106,8 @@ for i, p in enumerate(posts):
             f'<div class="shot-bar"><i></i><i></i><i></i><span>{e(p.get("shot_label") or p["platform"])}</span></div>'
             f'<div class="shot-body"><img src="/blog/img/{p["image"]}" alt="{e(p.get("caption") or p["title"])}"></div></div>'
             + (f'<figcaption>{e(p["caption"])}</figcaption>' if p.get("caption") else '') + '</figure>') if p.get("image") else ""
+    ch = next((c for c in CHANNELS if c["platform"] == p["platform"]), None)
+    svc_link = f'<a class="svc-link" href="/{ch["slug"]}.html">Need help with {e(ch["platform"])}? See our {e(ch["platform"])} services →</a>' if ch else ""
     page = head(f"{p.get('seo_title', p['title'])} | Zenshin Digital", p["description"], url, p["image"], extra) + f"""
 <main class="bwrap art">
   <a class="back" href="/blog/">← All articles</a>
@@ -118,6 +121,7 @@ for i, p in enumerate(posts):
     {faq}
     {src_html(p['sources'])}
   </div>
+  {svc_link}
   {AUTHOR}
   {CTA}
   {'<section class="more"><h2>More paid media news</h2>' + more + '</section>' if others else ''}
@@ -151,8 +155,56 @@ idx = head("Paid Media News | Zenshin Digital Blog",
 """ + FOOT
 open(os.path.join(blog, "index.html"), "w", encoding="utf-8").write(idx)
 
+# channel pages
+STEPS = [("Audit", "We review your account, tracking and spend, and list what to fix first."),
+         ("Setup", "We build or restructure campaigns, conversion tracking and audiences."),
+         ("Optimise", "We test creatives, bids and targeting, and scale what works."),
+         ("Report", "Clear reporting and regular strategy reviews with you.")]
+for c in CHANNELS:
+    url = f"{SITE}/{c['slug']}.html"
+    news = [p for p in posts if p["platform"] == c["platform"]][:3]
+    news_html = "".join(f'<a class="more-item" href="/blog/{p["slug"]}.html"><time datetime="{p["date"]}">{nice(p["date"])}</time>{e(p["title"])}</a>' for p in news) \
+        or f'<p class="empty">No {e(c["platform"])} articles yet. <a href="/blog/">See all paid media news →</a></p>'
+    ld = {"@context": "https://schema.org", "@type": "Service", "name": f"{c['platform']} management",
+          "serviceType": f"{c['platform']} management", "description": c["description"], "url": url,
+          "provider": {"@type": "Organization", "name": "Zenshin Digital", "url": SITE}, "areaServed": "Worldwide"}
+    fq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+          {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in c["faq"]]}
+    extra = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n  <script type="application/ld+json">{json.dumps(fq, ensure_ascii=False)}</script>'
+    others = " · ".join(f'<a href="/{o["slug"]}.html">{e(o["platform"])}</a>' for o in CHANNELS if o is not c)
+    page = head(f"{c['seo_title']} | Zenshin Digital", c["description"], url, None, extra, body_class="svc", og_type="website") + f"""
+<main class="bwrap svcp">
+  <section class="svc-hero">
+    <span class="kicker">Services · {e(c['platform'])}</span>
+    <h1>{c['h1']}</h1>
+    <p>{e(c['lede'])}</p>
+    <a class="btn" href="mailto:hello@zenshindigital.com?subject={e(c['platform']).replace(' ', '%20')}%20strategy%20call">Book a Free Strategy Call</a>
+  </section>
+  <section class="svc-sec">
+    <h2>What we manage</h2>
+    <div class="svc-grid">{"".join(f'<div class="svc-card"><h3>{e(t)}</h3><p>{e(d)}</p></div>' for t, d in c['manage'])}</div>
+  </section>
+  <section class="svc-sec">
+    <h2>How we work</h2>
+    <ol class="steps">{"".join(f'<li><strong>{e(t)}</strong><span>{e(d)}</span></li>' for t, d in STEPS)}</ol>
+  </section>
+  <section class="svc-sec">
+    <h2>Latest {e(c['platform'])} news</h2>
+    <div class="news">{news_html}</div>
+    <a class="all" href="/blog/">All paid media news →</a>
+  </section>
+  <section class="svc-sec">
+    <h2>FAQ</h2>
+    <div class="faq">{"".join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in c['faq'])}</div>
+  </section>
+  {CTA}
+  <p class="other">Other services: {others}</p>
+</main>
+""" + FOOT
+    open(os.path.join(out, f"{c['slug']}.html"), "w", encoding="utf-8").write(page)
+
 # sitemap + robots
-urls = [(f"{SITE}/", posts[0]["date"]), (f"{SITE}/blog/", posts[0]["date"])] + [(f"{SITE}/blog/{p['slug']}.html", p["date"]) for p in posts]
+urls = [(f"{SITE}/", posts[0]["date"]), (f"{SITE}/blog/", posts[0]["date"])] + [(f"{SITE}/{c['slug']}.html", max([c["reviewed"]] + [p["date"] for p in posts if p["platform"] == c["platform"]])) for c in CHANNELS] + [(f"{SITE}/blog/{p['slug']}.html", p["date"]) for p in posts]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
      "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n"
 open(os.path.join(out, "sitemap.xml"), "w").write(sm)
