@@ -118,3 +118,40 @@ pre code { background: none; padding: 0; white-space: pre-wrap; word-break: brea
 .faq summary { cursor: pointer; font-weight: 600; color: var(--ink); }
 .faq details p { margin: .6rem 0 0; }
 .meta span:not(.tag) { white-space: nowrap; }
+
+/* light reading mode for blog */
+body.light { background: #f7f7fb; color: #12121c; }
+body.light .bnav { background: rgba(8,8,16,.92); }
+body.light main { --ink: #12121c; --muted: #4b4f5e; --dim: #6b7080; --line: rgba(18,18,28,.10); --card: #ffffff; --bg-2: #f0f0f7; --link: #4f46e5; --cyan: #0e7490; }
+body.light .art, body.light .art h1, body.light .content h2 { color: #12121c; }
+body.light .content p, body.light .content li { color: #2b2e3a; }
+body.light .lede { color: #4b4f5e; }
+body.light code { background: rgba(79,70,229,.09); color: #3730a3; }
+body.light pre { background: #12121c; border-color: #12121c; }
+body.light pre code { color: #e6e6f5; }
+body.light .tag { color: #0e7490; border-color: rgba(14,116,144,.35); }
+body.light .takeaways { background: #fff; box-shadow: 0 6px 24px rgba(18,18,28,.06); }
+body.light .takeaways li { color: #2b2e3a; }
+body.light .tbl { background: #fff; }
+body.light .tbl th { background: #f0f0f7; color: #0e7490; }
+body.light .tbl td { color: #2b2e3a; }
+body.light .faq details { background: #fff; }
+body.light .faq summary { color: #12121c; }
+body.light .author { background: #fff; }
+body.light .author strong { color: #12121c; }
+body.light .bcta { background: radial-gradient(600px 240px at 50% 0%, rgba(99,102,241,.35), transparent 70%), #0d0d1f; border-color: #0d0d1f; }
+body.light .bcta h2 { color: #f0efff; } body.light .bcta p { color: rgba(240,239,255,.7); }
+body.light .more-item { color: #12121c; }
+body.light .bfoot { background: #0a0a12; margin-top: 72px; }
+body.light .bhero h1 { color: #12121c; }
+body.light .bhero p { color: #4b4f5e; }
+body.light .kicker { color: #0e7490; }
+body.light .post { background: #fff; color: #12121c; border-color: rgba(18,18,28,.10); box-shadow: 0 6px 24px rgba(18,18,28,.05); }
+body.light .post h2 { color: #12121c; }
+body.light .post p { color: #4b4f5e; }
+body.light .post .read { color: #4f46e5; }
+body.light .post:hover { border-color: rgba(79,70,229,.45); }
+body.light .meta { color: #6b7080; }
+body.light .back { color: #4f46e5; }
+body.light .sources a, body.light .content a { color: #4f46e5; }
+body.light .shot figcaption { color: #6b7080; }

@@ -51,7 +51,7 @@ def head(title, desc, url, image=None, extra=""):
   {FAVICON}
   {extra}
 </head>
-<body>
+<body class="light">
 <header class="bnav"><div class="bwrap bnav-in">
   <a href="/" class="logo"><img class="logo-i" src="/assets/brand/zenshin-icon.svg" alt="" width="32" height="32">Zenshin Digital</a>
   <nav><a href="/blog/">Blog</a><a href="/#about">About</a><a href="/#contact" class="btn">Book a Call</a></nav>
