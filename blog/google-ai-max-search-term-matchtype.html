@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google Ads: new {search_term_matchtype} parameter shows AI Max expansion clicks | Zenshin Digital</title>
-  <meta name="description" content="A new ValueTrack parameter, {search_term_matchtype}, shows when a click on an exact-match keyword actually came from an AI Max expansion." />
+  <title>Google Ads {search_term_matchtype}: Track AI Max Expansion Clicks | Zenshin Digital</title>
+  <meta name="description" content="Google Ads added the {search_term_matchtype} ValueTrack parameter. Here&#x27;s what each value means and how to separate AI Max expansion clicks from real exact, phrase and broad match clicks." />
   <link rel="canonical" href="https://zenshindigital.com/blog/google-ai-max-search-term-matchtype.html" />
-  <meta property="og:title" content="Google Ads: new {search_term_matchtype} parameter shows AI Max expansion clicks | Zenshin Digital" />
-  <meta property="og:description" content="A new ValueTrack parameter, {search_term_matchtype}, shows when a click on an exact-match keyword actually came from an AI Max expansion." />
+  <meta property="og:title" content="Google Ads {search_term_matchtype}: Track AI Max Expansion Clicks | Zenshin Digital" />
+  <meta property="og:description" content="Google Ads added the {search_term_matchtype} ValueTrack parameter. Here&#x27;s what each value means and how to separate AI Max expansion clicks from real exact, phrase and broad match clicks." />
   <meta property="og:url" content="https://zenshindigital.com/blog/google-ai-max-search-term-matchtype.html" />
   <meta property="og:type" content="article" />
   
@@ -15,9 +15,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/blog/blog.css?v=60aa7330" />
+  <link rel="stylesheet" href="/blog/blog.css?v=fbdb6e53" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%236366f1'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='19' fill='white'>Z</text></svg>" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Google Ads: new {search_term_matchtype} parameter shows AI Max expansion clicks", "description": "A new ValueTrack parameter, {search_term_matchtype}, shows when a click on an exact-match keyword actually came from an AI Max expansion.", "datePublished": "2026-11-16", "dateModified": "2026-11-16", "image": [], "mainEntityOfPage": "https://zenshindigital.com/blog/google-ai-max-search-term-matchtype.html", "author": {"@type": "Person", "name": "Xabier Urrutia", "url": "https://zenshindigital.com/#about"}, "publisher": {"@type": "Organization", "name": "Zenshin Digital", "url": "https://zenshindigital.com"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Google Ads {search_term_matchtype}: how to track AI Max expansion clicks", "description": "Google Ads added the {search_term_matchtype} ValueTrack parameter. Here's what each value means and how to separate AI Max expansion clicks from real exact, phrase and broad match clicks.", "datePublished": "2026-11-16", "dateModified": "2026-11-18", "image": [], "mainEntityOfPage": "https://zenshindigital.com/blog/google-ai-max-search-term-matchtype.html", "author": {"@type": "Person", "name": "Xabier Urrutia", "url": "https://zenshindigital.com/#about"}, "publisher": {"@type": "Organization", "name": "Zenshin Digital", "url": "https://zenshindigital.com"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does “a” mean in {search_term_matchtype}?", "acceptedAnswer": {"@type": "Answer", "text": "“a” means the search term was matched by AI Max for Search, either as an expansion of one of your keywords or as a keywordless match."}}, {"@type": "Question", "name": "What is the difference between {matchtype} and {search_term_matchtype}?", "acceptedAnswer": {"@type": "Answer", "text": "{matchtype} is the match type of your keyword. {search_term_matchtype} is the match type of the search term that actually triggered the ad. They differ when AI Max expands a keyword."}}, {"@type": "Question", "name": "Where can I use {search_term_matchtype}?", "acceptedAnswer": {"@type": "Answer", "text": "Like other ValueTrack parameters, in the final URL, the tracking template or custom parameters."}}, {"@type": "Question", "name": "Does {search_term_matchtype} work in Performance Max?", "acceptedAnswer": {"@type": "Answer", "text": "Google's help page does not list it for Performance Max. It is documented for Search campaigns, including AI Max for Search."}}]}</script>
 </head>
 <body>
 <header class="bnav"><div class="bwrap bnav-in">
@@ -27,30 +28,71 @@
 
 <main class="bwrap art">
   <a class="back" href="/blog/">← All articles</a>
-  <div class="meta"><span class="tag">Google Ads</span><time datetime="2026-11-16">November 16, 2026</time></div>
-  <h1>Google Ads: new {search_term_matchtype} parameter shows AI Max expansion clicks</h1>
-  <p class="lede">A new ValueTrack parameter, {search_term_matchtype}, shows when a click on an exact-match keyword actually came from an AI Max expansion.</p>
+  <div class="meta"><span class="tag">Google Ads</span><time datetime="2026-11-16">November 16, 2026</time><span>Updated November 18, 2026</span><span>By Xabier Urrutia</span></div>
+  <h1>Google Ads {search_term_matchtype}: how to track AI Max expansion clicks</h1>
+  <p class="lede">Google Ads added the {search_term_matchtype} ValueTrack parameter. Here&#x27;s what each value means and how to separate AI Max expansion clicks from real exact, phrase and broad match clicks.</p>
+  <div class="takeaways"><h2>Key facts</h2><ul><li>{search_term_matchtype} records the match type of the search term that triggered your ad.</li><li>Values: e (exact), p (phrase), b (broad), a (AI Max).</li><li>When AI Max expands a keyword, {matchtype} still shows the keyword&#x27;s match type, while {search_term_matchtype} shows “a”.</li><li>It can be used in final URLs, tracking templates and custom parameters.</li></ul></div>
   
   <div class="content">
     
-<p>Google Ads has documented a new ValueTrack parameter, <code>{search_term_matchtype}</code>. It shows how the search term actually matched, including clicks that came from <strong>AI Max</strong> expansions.</p>
-<h2>Same click, two parameters</h2>
-<p>When AI Max expands an exact-match keyword:</p>
-<ul>
-  <li><code>{matchtype}</code> returns <strong>e</strong>, so it looks like an exact match.</li>
-  <li><code>{search_term_matchtype}</code> returns <strong>a</strong>, an AI Max expansion.</li>
-</ul>
-<h2>{search_term_matchtype} values</h2>
-<ul>
-  <li><strong>e</strong>: exact</li>
-  <li><strong>p</strong>: phrase</li>
-  <li><strong>b</strong>: broad</li>
-  <li><strong>a</strong>: AI Max expansions and keywordless</li>
-</ul>
-<h2>Google's example tracking template</h2>
-<pre><code>{lpurl}?keyword={keyword}&amp;matchtype={matchtype}&amp;search_term_matchtype={search_term_matchtype}</code></pre>
+<p>Google Ads has added a new ValueTrack parameter, <code>{search_term_matchtype}</code>, to its help documentation. It records the match type of the <strong>search term</strong> that triggered your ad, and it makes it possible to see which clicks came from <strong>AI Max for Search</strong> expansions, even when they were credited to an exact or phrase match keyword.</p>
+<p>The parameter was first reported on November 11, 2026 by PPC News Feed. Google has not published a separate announcement or a launch date.</p>
 
-    <div class="sources"><h2>Sources</h2><ul><li><a href="https://support.google.com/google-ads/answer/2375447" rel="noopener" target="_blank">Google Ads Help: About ValueTrack parameters</a></li><li><a href="https://ppc.land/googles-new-parameter-shows-when-an-exact-click-was-really-ai-max/" rel="noopener" target="_blank">PPC Land</a></li></ul></div>
+<h2>{matchtype} vs. {search_term_matchtype}</h2>
+<p>Google's ValueTrack documentation defines the two parameters like this:</p>
+<ul>
+  <li><code>{matchtype}</code>: “The match type of the keyword that triggered your ad.”</li>
+  <li><code>{search_term_matchtype}</code>: “The match type of the search term that triggered your ad.”</li>
+</ul>
+<p>Both return the same set of values:</p>
+<div class="tbl"><table>
+  <thead><tr><th>Value</th><th>{matchtype}</th><th>{search_term_matchtype}</th></tr></thead>
+  <tbody>
+    <tr><td><code>e</code></td><td>Exact</td><td>Exact</td></tr>
+    <tr><td><code>p</code></td><td>Phrase</td><td>Phrase</td></tr>
+    <tr><td><code>b</code></td><td>Broad</td><td>Broad</td></tr>
+    <tr><td><code>a</code></td><td>AI Max (keywordless match)</td><td>AI Max (expansions and keywordless matches)</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Why the new parameter matters for AI Max</h2>
+<p>With AI Max for Search, Google can match a keyword to search terms beyond its own match type. In that case, <code>{matchtype}</code> still reports the keyword's match type, for example <code>e</code> for an exact match keyword. <code>{search_term_matchtype}</code> reports <code>a</code>, showing the click actually came from an AI Max expansion.</p>
+<p>Combined with <code>{targetid}</code> (keywords start with “kwd”, AI Max keywordless matches with “kwl”) and <code>{keyword}</code> (empty for keywordless matches), the parameters separate three types of traffic:</p>
+<div class="tbl"><table>
+  <thead><tr><th>Traffic type</th><th>{matchtype}</th><th>{search_term_matchtype}</th><th>{keyword}</th></tr></thead>
+  <tbody>
+    <tr><td>Standard keyword match</td><td>e, p or b</td><td>e, p or b</td><td>Filled</td></tr>
+    <tr><td>AI Max expansion of a keyword</td><td>e, p or b</td><td>a</td><td>Filled</td></tr>
+    <tr><td>AI Max keywordless match</td><td>a</td><td>a</td><td>Empty</td></tr>
+  </tbody>
+</table></div>
+<p>The scale of AI Max expansions is growing. According to Smarter Ecommerce data reported by PPC Land, the share of exact match impressions served through AI Max expansions rose from about 0% in January 2025 to nearly 29% by July 2026, across 383 million EMEA ecommerce Search impressions with AI Max active. With <code>{matchtype}</code> alone, all of those clicks would have looked like exact match.</p>
+
+<h2>How to set it up</h2>
+<ol>
+  <li>In Google Ads, open the tracking template at account, campaign or ad group level. ValueTrack parameters can also go in the final URL or in custom parameters.</li>
+  <li>Add the parameters to your template. For example:
+    <pre><code>{lpurl}?keyword={keyword}&amp;matchtype={matchtype}&amp;search_term_matchtype={search_term_matchtype}</code></pre>
+    Keep <code>{lpurl}</code> at the start. Google's AI Max guidance recommends this, because final URL expansion can send clicks to other pages of your site.</li>
+  <li>Test the template with the “Test” option in Google Ads before saving.</li>
+  <li>In your analytics or CRM, filter the URL parameters:
+    <ul>
+      <li><strong>AI Max expansion traffic:</strong> matchtype is e, p or b, and search_term_matchtype is a.</li>
+      <li><strong>Standard keyword traffic:</strong> search_term_matchtype is e, p or b.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>AI Max for Search: timeline</h2>
+<ul>
+  <li><strong>May 2025:</strong> Google launches AI Max for Search campaigns, with search term matching, text customisation and final URL expansion.</li>
+  <li><strong>July 2025:</strong> a “Search terms match type” segment is added to the Keywords report.</li>
+  <li><strong>September 1, 2026:</strong> Google starts upgrading broad match and automatically created assets campaigns to AI Max for Search.</li>
+  <li><strong>November 2026:</strong> <code>{search_term_matchtype}</code> appears in Google's ValueTrack documentation.</li>
+</ul>
+
+    <h2>FAQ</h2><div class="faq"><details><summary>What does “a” mean in {search_term_matchtype}?</summary><p>“a” means the search term was matched by AI Max for Search, either as an expansion of one of your keywords or as a keywordless match.</p></details><details><summary>What is the difference between {matchtype} and {search_term_matchtype}?</summary><p>{matchtype} is the match type of your keyword. {search_term_matchtype} is the match type of the search term that actually triggered the ad. They differ when AI Max expands a keyword.</p></details><details><summary>Where can I use {search_term_matchtype}?</summary><p>Like other ValueTrack parameters, in the final URL, the tracking template or custom parameters.</p></details><details><summary>Does {search_term_matchtype} work in Performance Max?</summary><p>Google&#x27;s help page does not list it for Performance Max. It is documented for Search campaigns, including AI Max for Search.</p></details></div>
+    <div class="sources"><h2>Sources</h2><ul><li><a href="https://support.google.com/google-ads/answer/6305348" rel="noopener" target="_blank">Google Ads Help: Set up tracking with ValueTrack parameters</a></li><li><a href="https://support.google.com/google-ads/answer/2375447" rel="noopener" target="_blank">Google Ads Help: About ValueTrack parameters</a></li><li><a href="https://ppc.land/googles-new-parameter-shows-when-an-exact-click-was-really-ai-max/" rel="noopener" target="_blank">PPC Land: Google&#x27;s new parameter shows when an “exact” click was really AI Max</a></li></ul></div>
   </div>
   <aside class="author">
   <img src="/assets/img/xabier-urrutia.jpg" alt="Xabier Urrutia" width="72" height="72">
@@ -62,7 +104,7 @@
   <p>Book a free 30-minute strategy call. I'll review your current setup and identify quick wins.</p>
   <a class="btn" href="mailto:hello@zenshindigital.com?subject=Strategy%20call">Book a Free Strategy Call</a>
 </section>
-  <section class="more"><h2>More paid media news</h2><a class="more-item" href="/blog/meta-ads-5-existing-posts-one-ad.html"><span class="tag">Meta Ads</span>Meta Ads Manager: up to 5 existing posts in one ad</a><a class="more-item" href="/blog/amazon-ads-price-claims-policy.html"><span class="tag">Amazon Ads</span>Amazon Ads bans claims like “Unbeatable price” in ad copy</a></section>
+  <section class="more"><h2>More paid media news</h2><a class="more-item" href="/blog/meta-ads-5-existing-posts-one-ad.html"><span class="tag">Meta Ads</span>Meta Ads Manager now lets you add up to 5 existing posts in one ad</a><a class="more-item" href="/blog/amazon-ads-price-claims-policy.html"><span class="tag">Amazon Ads</span>Amazon Ads bans claims like “Best price” and “Unbeatable price” in ads</a></section>
 </main>
 <footer class="bfoot"><div class="bwrap">
   <span>© 2026 Zenshin Digital</span>

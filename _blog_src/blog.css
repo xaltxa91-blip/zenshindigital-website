@@ -92,3 +92,22 @@ pre code { background: none; padding: 0; white-space: pre-wrap; word-break: brea
   .bhero { padding: 56px 0 36px; }
   .author { align-items: flex-start; }
 }
+
+/* takeaways, tables, faq */
+.takeaways { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 16px; padding: 18px 22px; margin: 0 0 2rem; }
+.takeaways h2 { font-family: var(--mono); font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); margin: 0 0 .5rem; }
+.takeaways ul { margin: 0; padding-left: 1.1rem; }
+.takeaways li { color: rgba(240,239,255,.85); margin: .3rem 0; }
+.takeaways li::marker { color: var(--accent); }
+.content ol { padding-left: 1.3rem; }
+.content ol li::marker { color: var(--cyan); font-weight: 600; }
+.tbl { overflow-x: auto; margin: 1rem 0 1.5rem; border: 1px solid var(--line); border-radius: 14px; }
+.tbl table { width: 100%; border-collapse: collapse; font-size: .95rem; min-width: 480px; }
+.tbl th, .tbl td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tbl th { font-family: var(--mono); font-size: .75rem; letter-spacing: .06em; color: var(--cyan); background: var(--bg-2); font-weight: 500; }
+.tbl tr:last-child td { border-bottom: 0; }
+.tbl td { color: rgba(240,239,255,.82); }
+.faq details { border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin: .6rem 0; background: var(--card); }
+.faq summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+.faq details p { margin: .6rem 0 0; }
+.meta span:not(.tag) { white-space: nowrap; }

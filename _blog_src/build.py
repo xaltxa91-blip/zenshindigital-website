@@ -85,24 +85,33 @@ for i, p in enumerate(posts):
     url = f"{SITE}/blog/{p['slug']}.html"
     img_url = [f"{SITE}/blog/img/{p['image']}"] if p.get("image") else []
     ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": p["title"],
-          "description": p["description"], "datePublished": p["date"], "dateModified": p["date"],
+          "description": p["description"], "datePublished": p["date"], "dateModified": p.get("modified", p["date"]),
           "image": img_url, "mainEntityOfPage": url,
           "author": {"@type": "Person", "name": "Xabier Urrutia", "url": f"{SITE}/#about"},
           "publisher": {"@type": "Organization", "name": "Zenshin Digital", "url": SITE}}
     extra = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+    if p.get("faq"):
+        fq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+              {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faq"]]}
+        extra += f'\n  <script type="application/ld+json">{json.dumps(fq, ensure_ascii=False)}</script>'
+    tk = ('<div class="takeaways"><h2>Key facts</h2><ul>' + "".join(f"<li>{e(t)}</li>" for t in p["takeaways"]) + '</ul></div>') if p.get("takeaways") else ""
+    faq = ('<h2>FAQ</h2><div class="faq">' + "".join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in p["faq"]) + '</div>') if p.get("faq") else ""
+    upd = f' · Updated {nice(p["modified"])}' if p.get("modified") and p["modified"] != p["date"] else ""
     others = [q for q in posts if q is not p][:3]
     more = "".join(f'<a class="more-item" href="/blog/{q["slug"]}.html"><span class="tag">{e(q["platform"])}</span>{e(q["title"])}</a>' for q in others)
     shot = (f'<figure class="shot"><img src="/blog/img/{p["image"]}" alt="{e(p.get("caption") or p["title"])}">'
             + (f'<figcaption>{e(p["caption"])}</figcaption>' if p.get("caption") else '') + '</figure>') if p.get("image") else ""
-    page = head(f"{p['title']} | Zenshin Digital", p["description"], url, p["image"], extra) + f"""
+    page = head(f"{p.get('seo_title', p['title'])} | Zenshin Digital", p["description"], url, p["image"], extra) + f"""
 <main class="bwrap art">
   <a class="back" href="/blog/">← All articles</a>
-  <div class="meta"><span class="tag">{e(p['platform'])}</span><time datetime="{p['date']}">{nice(p['date'])}</time></div>
+  <div class="meta"><span class="tag">{e(p['platform'])}</span><time datetime="{p['date']}">{nice(p['date'])}</time><span>{upd.lstrip(' · ') if upd else ''}</span><span>By Xabier Urrutia</span></div>
   <h1>{e(p['title'])}</h1>
   <p class="lede">{e(p['description'])}</p>
+  {tk}
   {shot}
   <div class="content">
     {p['body']}
+    {faq}
     {src_html(p['sources'])}
   </div>
   {AUTHOR}
