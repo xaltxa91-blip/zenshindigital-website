@@ -17,7 +17,7 @@ POSTS = [
     description="Meta Ads Manager is showing a new option to add up to 5 published posts to a single ad, with Meta showing each person the post they're most likely to engage with. Here's what is confirmed and what is still unknown.",
     image="meta-ads-5-posts-screenshot.jpg",
     shot_label="Meta Ads Manager",
-    caption="Screenshot: my Meta Ads Manager, “0 of 5 posts selected” under Ad creative",
+    caption="Meta Ads Manager: the new “0 of 5 posts selected” field under Ad creative",
     takeaways=[
       "Under “Use existing posts”, advertisers can now select up to 5 published posts in one ad.",
       "Meta shows each person the post it predicts they're most likely to engage with.",
@@ -25,7 +25,7 @@ POSTS = [
       "Meta has not published an announcement, help page or rollout details yet.",
     ],
     body="""
-<p>Meta Ads Manager is showing a new option for ads built from existing posts: instead of one published post per ad, advertisers can now select <strong>up to 5 posts in a single ad</strong>. The option was shared on LinkedIn by Bram Van der Hallen (Edge.be) on November 17, 2026, and reported by PPC Land the same day. It is also live in my own Ads Manager account, as the screenshot above shows.</p>
+<p>Meta Ads Manager is showing a new option for ads built from existing posts: instead of one published post per ad, advertisers can now select <strong>up to 5 posts in a single ad</strong>. The option was shared on LinkedIn by Bram Van der Hallen (Edge.be) on November 17, 2026, and reported by PPC Land the same day. We can also see it in our own Meta Ads Manager account, as the screenshot above shows.</p>
 <p>Meta has not announced the change or documented it in its Business Help Center yet, so some details are still unknown. This article covers what can be confirmed from Ads Manager itself.</p>
 
 <h2>Where to find the new option in Ads Manager</h2>
@@ -72,7 +72,7 @@ POSTS = [
     ],
     sources=[
       ("PPC Land: One Meta ad can now carry up to 5 existing posts", "https://ppc.land/one-meta-ad-can-now-carry-up-to-5-existing-posts/"),
-      ("Screenshot from my Meta Ads Manager account (November 18, 2026)", None),
+      ("Screenshot from our Meta Ads Manager account (November 18, 2026)", None),
     ],
   ),
 
