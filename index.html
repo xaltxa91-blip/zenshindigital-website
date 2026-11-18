@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zenshin Digital — AI-powered performance marketing by Xabier Urrutia. Paid media on Google, Meta, Amazon, LinkedIn, TikTok and more, with AI-powered creatives and optimisation." />
+  <title>Zenshin Digital — AI-Powered Performance Marketing</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css?v=20261118" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%236366f1'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='19' fill='white'>Z</text></svg>" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner container">
+      <a href="#" class="nav-logo" aria-label="Zenshin Digital — home">
+        <span class="nav-logo-icon" aria-hidden="true">Z</span>
+        <span class="nav-logo-text">Zenshin Digital</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#services"     class="nav-link">Services</a></li>
+        <li><a href="#ai-system"    class="nav-link">AI System</a></li>
+        <li><a href="#process"      class="nav-link">Process</a></li>
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="blog/"         class="nav-link">Blog</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-nav">Book a Call</a>
+        <button class="nav-hamburger" id="nav-hamburger"
+                aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true" role="dialog" aria-label="Mobile menu">
+      <ul role="list">
+        <li><a href="#services"     class="nav-mobile-link">Services</a></li>
+        <li><a href="#ai-system"    class="nav-mobile-link">AI System</a></li>
+        <li><a href="#process"      class="nav-mobile-link">Process</a></li>
+        <li><a href="#about"        class="nav-mobile-link">About</a></li>
+        <li><a href="blog/"         class="nav-mobile-link">Blog</a></li>
+        <li><a href="#contact"      class="btn btn-primary btn-mobile-cta">Book a Strategy Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" aria-label="Hero — AI-Powered Growth Agency">
+      <!-- Background layers -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-orb hero-orb--3"></div>
+        <div class="hero-grid-overlay"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-mouse-gradient" id="hero-mouse-gradient"></div>
+      </div>
+
+      <!-- Particles -->
+      <canvas class="hero-particles" id="hero-particles" aria-hidden="true"></canvas>
+
+      <!-- Main content -->
+      <div class="container hero-content">
+        <div class="hero-eyebrow reveal" data-delay="0">
+          <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+          <span class="mono">AI-Powered Performance Marketing</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="reveal" data-delay="0.1">AI-Powered Growth</span>
+          <span class="reveal" data-delay="0.2">for Brands That Want</span>
+          <span class="reveal" data-delay="0.3">to <em class="gradient-text">Dominate.</em></span>
+        </h1>
+
+        <p class="hero-sub reveal" data-delay="0.4">
+          I combine AI tools, paid media and performance creatives to grow
+          businesses profitably across every major advertising platform.
+        </p>
+
+        <div class="hero-actions reveal" data-delay="0.5">
+          <a href="#contact" class="btn btn-primary btn-glow">Book a Strategy Call</a>
+          <a href="#about" class="btn btn-ghost">
+            About Me <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="hero-trusted reveal" data-delay="0.65">
+          <span class="hero-trusted-label mono">Platforms</span>
+          <div class="hero-platforms" role="list" aria-label="Advertising platforms">
+            <span role="listitem">Google</span>
+            <span role="listitem">Meta</span>
+            <span role="listitem">Amazon</span>
+            <span role="listitem">LinkedIn</span>
+            <span role="listitem">TikTok</span>
+            <span role="listitem">+6 more</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== STATS ===================== -->
+    <section class="stats-section" id="stats" aria-labelledby="stats-heading">
+      <div class="container">
+        <h2 id="stats-heading" class="sr-only">Performance Statistics</h2>
+        <div class="stats-grid" role="list">
+          <div class="stat-item reveal" role="listitem">
+            <div class="stat-number mono" data-count="100" data-prefix="$" data-suffix="M+">$100M+</div>
+            <div class="stat-label">Ad Spend Managed</div>
+          </div>
+          <div class="stat-item reveal" data-delay="0.1" role="listitem">
+            <div class="stat-number mono" data-count="10" data-suffix="+">10+</div>
+            <div class="stat-label">Ad Platforms</div>
+          </div>
+          <div class="stat-item reveal" data-delay="0.2" role="listitem">
+            <div class="stat-number mono" data-count="6">6</div>
+            <div class="stat-label">Regions Worldwide</div>
+          </div>
+          <div class="stat-item reveal" data-delay="0.3" role="listitem">
+            <div class="stat-number mono" data-count="3">3</div>
+            <div class="stat-label">Languages: EN · DE · ES</div>
+          </div>
+        </div>
+
+        <div class="stats-platforms reveal" aria-label="Platforms I manage">
+          <div class="stats-platforms-scroll">
+            <span class="platform-badge">Google</span>
+            <span class="platform-badge">Meta</span>
+            <span class="platform-badge">Amazon</span>
+            <span class="platform-badge">LinkedIn</span>
+            <span class="platform-badge">ChatGPT</span>
+            <span class="platform-badge">TikTok</span>
+            <span class="platform-badge">Pinterest</span>
+            <span class="platform-badge">Snapchat</span>
+            <span class="platform-badge">Reddit</span>
+            <span class="platform-badge">Microsoft</span>
+            <span class="platform-badge">Programmatic</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services-section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker mono reveal">What I Do</span>
+          <h2 id="services-heading" class="section-title reveal" data-delay="0.1">
+            Every Channel.<br>Every <em class="gradient-text">Advantage.</em>
+          </h2>
+          <p class="section-sub reveal" data-delay="0.2">
+            AI-powered systems deployed across every major advertising platform
+            to maximize your brand's profitable growth.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card reveal" data-delay="0.05">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4" stroke-linecap="round"/>
+                <path d="M11 8v6M8 11h6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Google Ads</h3>
+            <p class="service-card-desc">Capture high-intent traffic with AI-optimized search, shopping, and display campaigns that convert at scale.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.1">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 12c-2.5-4.5-5.5-6.5-7.5-4s-1.5 7 1 8.5 5.5 1 6.5-4.5Z" stroke-linecap="round"/>
+                <path d="M12 12c2.5-4.5 5.5-6.5 7.5-4s1.5 7-1 8.5-5.5 1-6.5-4.5Z" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Meta Ads</h3>
+            <p class="service-card-desc">Scale across Facebook and Instagram with data-driven creative systems and precision audience targeting.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.1">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 8h14l-1.5 11a2 2 0 0 1-2 1.7h-7A2 2 0 0 1 6.5 19L5 8Z" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Amazon Ads</h3>
+            <p class="service-card-desc">Grow marketplace sales with Sponsored Products, Brands and Display campaigns built around profitable ACoS.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.1">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v6M8 7.5v.01M12 16v-3.5a2 2 0 0 1 4 0V16M12 10v6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">LinkedIn Ads</h3>
+            <p class="service-card-desc">Reach decision-makers by job title, company and industry with B2B campaigns that generate qualified leads.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.1">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 5h16v11H9l-5 4V5Z" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">ChatGPT Ads</h3>
+            <p class="service-card-desc">Show up in AI conversations where people research and compare products, on one of the newest ad channels.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.15">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="4" width="20" height="16" rx="3"/>
+                <path d="m10 9 4 3-4 3V9Z" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">TikTok Ads</h3>
+            <p class="service-card-desc">Dominate the attention economy with viral-native creative and algorithm-optimized video campaigns.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.2">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 3a4.5 4.5 0 0 1 4.5 4.5c0 4.5-4.5 9-4.5 9s-4.5-4.5-4.5-9A4.5 4.5 0 0 1 12 3Z" stroke-linecap="round"/>
+                <circle cx="12" cy="7.5" r="1.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Pinterest Ads</h3>
+            <p class="service-card-desc">Reach high-purchase-intent audiences with visually-driven campaigns that inspire and convert.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.25">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 4c-3.5 0-6 2.5-6 5.5 0 1.5.5 3 1.5 4 .5.5 1 1.5 1 2.5h7c0-1 .5-2 1-2.5 1-1 1.5-2.5 1.5-4C18 6.5 15.5 4 12 4Z" stroke-linecap="round"/>
+                <path d="M10 16v1a2 2 0 0 0 4 0v-1" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Snapchat Ads</h3>
+            <p class="service-card-desc">Connect with younger demographics through immersive AR and story-format advertising at scale.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.3">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="9"/>
+                <circle cx="9" cy="12" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="15" cy="12" r="1" fill="currentColor" stroke="none"/>
+                <path d="M9 16c.85.85 5.15.85 6 0" stroke-linecap="round"/>
+                <path d="M16 7h1.5a1.5 1.5 0 1 1 0 3l-1 .5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Reddit Ads</h3>
+            <p class="service-card-desc">Engage niche communities with authentic, interest-targeted campaigns that drive qualified leads.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.35">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="7.5" height="7.5" rx="1"/>
+                <rect x="13.5" y="3" width="7.5" height="7.5" rx="1"/>
+                <rect x="3" y="13.5" width="7.5" height="7.5" rx="1"/>
+                <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Microsoft Ads</h3>
+            <p class="service-card-desc">Capture premium Bing search traffic with lower competition and higher average order values.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.4">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 6h4m4 0h8M4 12h8m4 0h4M4 18h2m4 0h10" stroke-linecap="round"/>
+                <rect x="8" y="4" width="4" height="4" rx="0.5"/>
+                <rect x="12" y="10" width="4" height="4" rx="0.5"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Programmatic Ads</h3>
+            <p class="service-card-desc">Automate media buying across thousands of premium placements with real-time bidding intelligence.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.1">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="10" cy="10" r="6"/><path d="m14.5 14.5 5 5M7.5 10l2 2 3.5-4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Paid Media Audits</h3>
+            <p class="service-card-desc">A full review of your ad accounts, tracking and spend, with a clear list of what to fix first.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card service-card--featured reveal" data-delay="0.45">
+            <div class="service-card-badge">AI-Powered</div>
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41" stroke-linecap="round"/>
+                <circle cx="12" cy="12" r="4"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">AI Creatives</h3>
+            <p class="service-card-desc">Deploy AI-generated ad creatives that test, learn, and adapt faster than any human team ever could.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card service-card--featured reveal" data-delay="0.5">
+            <div class="service-card-badge">AI-Powered</div>
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="5" width="20" height="14" rx="3"/>
+                <path d="m10 9 5 3-5 3V9Z" fill="currentColor" stroke="none"/>
+                <circle cx="19" cy="6" r="3" fill="#6366f1" stroke="none"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">AI Video Ads</h3>
+            <p class="service-card-desc">Produce high-converting video at scale with AI-powered scriptwriting, editing, and performance optimization.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.55">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="5" width="14" height="16" rx="2"/>
+                <path d="M17 9h4v12H7v-2" stroke-linecap="round"/>
+                <path d="M7 9h7M7 13h7M7 17h4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Landing Page Optimization</h3>
+            <p class="service-card-desc">Convert more traffic with AI-tested landing pages engineered for maximum conversion rates.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="service-card reveal" data-delay="0.6">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 17h2l3-6 3 6 3-10 3 10h3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 21V3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card-title">Conversion Rate Optimization</h3>
+            <p class="service-card-desc">Systematically increase revenue without increasing ad spend through data-driven CRO frameworks.</p>
+            <span class="service-card-arrow" aria-hidden="true">→</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AI SYSTEM ===================== -->
+    <section class="ai-section" id="ai-system" aria-labelledby="ai-heading">
+      <div class="container">
+        <div class="ai-inner">
+
+          <div class="ai-text">
+            <span class="section-kicker mono reveal">How I Use AI</span>
+            <h2 id="ai-heading" class="section-title reveal" data-delay="0.1">
+              The AI Creative<br><em class="gradient-text">System.</em>
+            </h2>
+            <p class="section-sub reveal" data-delay="0.2">
+              I use AI at every step, from research and creatives to optimisation and
+              reporting, so your campaigns learn faster and waste less budget.
+            </p>
+
+            <ul class="ai-features reveal" data-delay="0.3" role="list">
+              <li class="ai-feature">
+                <div class="ai-feature-dot" aria-hidden="true"></div>
+                <div>
+                  <strong>AI Creative Production</strong>
+                  <span>Ad copy, image and video variants created and tested faster with AI tools</span>
+                </div>
+              </li>
+              <li class="ai-feature">
+                <div class="ai-feature-dot" aria-hidden="true"></div>
+                <div>
+                  <strong>Platform AI, Set Up Right</strong>
+                  <span>Google and Meta AI campaign types fed with the right data and clear guardrails</span>
+                </div>
+              </li>
+              <li class="ai-feature">
+                <div class="ai-feature-dot" aria-hidden="true"></div>
+                <div>
+                  <strong>Clean Conversion Data</strong>
+                  <span>Accurate tracking, so the algorithms optimise for real business results</span>
+                </div>
+              </li>
+              <li class="ai-feature">
+                <div class="ai-feature-dot" aria-hidden="true"></div>
+                <div>
+                  <strong>Faster Analysis</strong>
+                  <span>AI-assisted analysis to spot what works and act on it sooner</span>
+                </div>
+              </li>
+              <li class="ai-feature">
+                <div class="ai-feature-dot" aria-hidden="true"></div>
+                <div>
+                  <strong>Clear Reporting</strong>
+                  <span>Regular strategy reviews with you, in plain language</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="process-section" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker mono reveal">How I Work</span>
+          <h2 id="process-heading" class="section-title reveal" data-delay="0.1">
+            A System Built for<br><em class="gradient-text">Compounding Growth.</em>
+          </h2>
+        </div>
+
+        <div class="process-grid" role="list">
+
+          <div class="process-step reveal" data-delay="0.1" role="listitem">
+            <div class="process-step-num mono" aria-hidden="true">01</div>
+            <div class="process-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="16" cy="16" r="12"/>
+                <path d="M16 10v6l4 2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Research &amp; Strategy</h3>
+            <p>Deep market analysis, competitor intelligence, and AI-powered audience mapping to build your custom growth blueprint.</p>
+          </div>
+
+          <div class="process-step reveal" data-delay="0.2" role="listitem">
+            <div class="process-step-num mono" aria-hidden="true">02</div>
+            <div class="process-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 4v4m0 16v4M4 16h4m16 0h4m-5.17-8.83-2.83 2.83M9 23l2.83-2.83m0-8.34L9 9m13 13-2.83-2.83" stroke-linecap="round"/>
+                <circle cx="16" cy="16" r="5"/>
+              </svg>
+            </div>
+            <h3>AI Creative Development</h3>
+            <p>AI tools help create and test many creative variants to find the best-performing assets for your brand.</p>
+          </div>
+
+          <div class="process-step reveal" data-delay="0.3" role="listitem">
+            <div class="process-step-num mono" aria-hidden="true">03</div>
+            <div class="process-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 20h4l3-8 4 8 3-12 4 12h6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Paid Media Scaling</h3>
+            <p>Systematic budget allocation across platforms with AI-driven bidding strategies and real-time performance optimization.</p>
+          </div>
+
+          <div class="process-step reveal" data-delay="0.4" role="listitem">
+            <div class="process-step-num mono" aria-hidden="true">04</div>
+            <div class="process-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="m8 16 6-6 4 4 6-8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="26" cy="6" r="3" fill="#6366f1" stroke="none"/>
+              </svg>
+            </div>
+            <h3>Optimization &amp; Expansion</h3>
+            <p>Continuous iteration, audience expansion and creative refreshes that keep your growth compounding.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ECOSYSTEM ===================== -->
+    <section class="eco-section" id="ecosystem" aria-labelledby="eco-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker mono reveal">Omnichannel Reach</span>
+          <h2 id="eco-heading" class="section-title reveal" data-delay="0.1">
+            One AI Brain.<br><em class="gradient-text">Every Platform.</em>
+          </h2>
+          <p class="section-sub reveal" data-delay="0.2">
+            A unified AI system powering your brand's presence across every major
+            advertising ecosystem — simultaneously.
+          </p>
+        </div>
+
+        <div class="eco-visual reveal">
+          <svg class="eco-svg" viewBox="0 0 800 520" fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+               role="img" aria-label="Network showing Zenshin Digital connected to all 8 advertising platforms">
+            <defs>
+              <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#6366f1" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.3"/>
+              </linearGradient>
+              <radialGradient id="cg" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="ng" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- Lines from center (400,260) to each node -->
+            <line class="eco-line" x1="400" y1="260" x2="600" y2="260" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <line class="eco-line" x1="400" y1="260" x2="555" y2="416" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <line class="eco-line" x1="400" y1="260" x2="400" y2="480" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <line class="eco-line" x1="400" y1="260" x2="245" y2="416" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <line class="eco-line" x1="400" y1="260" x2="200" y2="260" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <line class="eco-line" x1="400" y1="260" x2="245" y2="104" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <line class="eco-line" x1="400" y1="260" x2="400" y2="40"  stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <line class="eco-line" x1="400" y1="260" x2="555" y2="104" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+            <!-- Center glow -->
+            <ellipse cx="400" cy="260" rx="64" ry="64" fill="url(#cg)"/>
+
+            <!-- Center node -->
+            <circle cx="400" cy="260" r="50" fill="#07070f" stroke="#6366f1" stroke-width="1.5" filter="url(#glow)"/>
+            <circle cx="400" cy="260" r="38" fill="#0b0b19" stroke="#6366f1" stroke-opacity="0.3" stroke-width="1"/>
+            <text x="400" y="256" text-anchor="middle" fill="#f0efff" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700" letter-spacing="0.5">Zenshin</text>
+            <text x="400" y="272" text-anchor="middle" fill="#6366f1" font-family="'JetBrains Mono',monospace" font-size="8" letter-spacing="2">DIGITAL</text>
+
+            <!-- Platform nodes -->
+            <!-- Google (right) -->
+            <ellipse cx="600" cy="260" rx="34" ry="34" fill="url(#ng)"/>
+            <circle cx="600" cy="260" r="30" fill="#07070f" stroke="#22d3ee" stroke-width="1.5" class="eco-node"/>
+            <text x="600" y="264" text-anchor="middle" fill="#e0fffe" font-family="'Space Grotesk',sans-serif" font-size="11" font-weight="600">Google</text>
+
+            <!-- Meta (bottom-right) -->
+            <ellipse cx="555" cy="416" rx="34" ry="34" fill="url(#ng)"/>
+            <circle cx="555" cy="416" r="30" fill="#07070f" stroke="#a855f7" stroke-width="1.5" class="eco-node"/>
+            <text x="555" y="420" text-anchor="middle" fill="#f0efff" font-family="'Space Grotesk',sans-serif" font-size="11" font-weight="600">Meta</text>
+
+            <!-- TikTok (bottom) -->
+            <ellipse cx="400" cy="480" rx="34" ry="34" fill="url(#ng)"/>
+            <circle cx="400" cy="480" r="30" fill="#07070f" stroke="#22d3ee" stroke-width="1.5" class="eco-node"/>
+            <text x="400" y="484" text-anchor="middle" fill="#e0fffe" font-family="'Space Grotesk',sans-serif" font-size="11" font-weight="600">TikTok</text>
+
+            <!-- Pinterest (bottom-left) -->
+            <ellipse cx="245" cy="416" rx="34" ry="34" fill="url(#ng)"/>
+            <circle cx="245" cy="416" r="30" fill="#07070f" stroke="#a855f7" stroke-width="1.5" class="eco-node"/>
+            <text x="245" y="420" text-anchor="middle" fill="#f0efff" font-family="'Space Grotesk',sans-serif" font-size="10" font-weight="600">Pinterest</text>
+
+            <!-- Snapchat (left) -->
+            <ellipse cx="200" cy="260" rx="34" ry="34" fill="url(#ng)"/>
+            <circle cx="200" cy="260" r="30" fill="#07070f" stroke="#22d3ee" stroke-width="1.5" class="eco-node"/>
+            <text x="200" y="264" text-anchor="middle" fill="#e0fffe" font-family="'Space Grotesk',sans-serif" font-size="10" font-weight="600">Snapchat</text>
+
+            <!-- Reddit (top-left) -->
+            <ellipse cx="245" cy="104" rx="34" ry="34" fill="url(#ng)"/>
+            <circle cx="245" cy="104" r="30" fill="#07070f" stroke="#a855f7" stroke-width="1.5" class="eco-node"/>
+            <text x="245" y="108" text-anchor="middle" fill="#f0efff" font-family="'Space Grotesk',sans-serif" font-size="11" font-weight="600">Reddit</text>
+
+            <!-- Microsoft (top) -->
+            <ellipse cx="400" cy="40" rx="34" ry="34" fill="url(#ng)"/>
+            <circle cx="400" cy="40" r="30" fill="#07070f" stroke="#22d3ee" stroke-width="1.5" class="eco-node"/>
+            <text x="400" y="37" text-anchor="middle" fill="#e0fffe" font-family="'Space Grotesk',sans-serif" font-size="9" font-weight="600">Microsoft</text>
+            <text x="400" y="49" text-anchor="middle" fill="#22d3ee" font-family="'JetBrains Mono',monospace" font-size="7">Ads</text>
+
+            <!-- Programmatic (top-right) -->
+            <ellipse cx="555" cy="104" rx="34" ry="34" fill="url(#ng)"/>
+            <circle cx="555" cy="104" r="30" fill="#07070f" stroke="#a855f7" stroke-width="1.5" class="eco-node"/>
+            <text x="555" y="100" text-anchor="middle" fill="#f0efff" font-family="'Space Grotesk',sans-serif" font-size="9" font-weight="600">Program-</text>
+            <text x="555" y="113" text-anchor="middle" fill="#f0efff" font-family="'Space Grotesk',sans-serif" font-size="9" font-weight="600">matic</text>
+
+            <!-- Animated dots moving along lines -->
+            <circle class="eco-dot eco-dot--1" cx="500" cy="260" r="3" fill="#22d3ee"/>
+            <circle class="eco-dot eco-dot--2" cx="477" cy="338" r="3" fill="#22d3ee"/>
+            <circle class="eco-dot eco-dot--3" cx="400" cy="370" r="3" fill="#22d3ee"/>
+            <circle class="eco-dot eco-dot--4" cx="322" cy="338" r="3" fill="#22d3ee"/>
+            <circle class="eco-dot eco-dot--5" cx="300" cy="260" r="3" fill="#22d3ee"/>
+            <circle class="eco-dot eco-dot--6" cx="322" cy="182" r="3" fill="#22d3ee"/>
+            <circle class="eco-dot eco-dot--7" cx="400" cy="150" r="3" fill="#22d3ee"/>
+            <circle class="eco-dot eco-dot--8" cx="477" cy="182" r="3" fill="#22d3ee"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-inner">
+
+          <div class="about-text">
+            <span class="section-kicker mono reveal">About Me</span>
+            <h2 id="about-heading" class="section-title reveal" data-delay="0.1">
+              Hi, I'm <em class="gradient-text">Xabier Urrutia.</em>
+            </h2>
+            <p class="about-desc reveal" data-delay="0.2">
+              I'm a performance marketing and growth specialist based in Barcelona. I've worked
+              at Google, Meta, GroupM and Semrush, and I've been helping businesses as a freelancer
+              since 2022. In my career I've managed more than $100M in ad spend across North America,
+              DACH, the UK &amp; Ireland, Southern Europe, Asia and LATAM.
+            </p>
+            <p class="about-desc reveal" data-delay="0.3">
+              I run campaigns on Google, Meta, Amazon, LinkedIn, TikTok, Microsoft, Reddit, Pinterest,
+              Snapchat and ChatGPT ads, and I use AI tools to plan, build and optimise them faster.
+              I work in English, German and Spanish.
+            </p>
+
+            <div class="about-pillars reveal" data-delay="0.4">
+              <div class="about-pillar">
+                <div class="about-pillar-mark" aria-hidden="true">⬡</div>
+                <strong>Direct Access</strong>
+                <span>When you work with Zenshin Digital, you work directly with me</span>
+              </div>
+              <div class="about-pillar">
+                <div class="about-pillar-mark" aria-hidden="true">◈</div>
+                <strong>AI-First</strong>
+                <span>AI tools in every step, from research and creatives to reporting</span>
+              </div>
+              <div class="about-pillar">
+                <div class="about-pillar-mark" aria-hidden="true">⬟</div>
+                <strong>Data-Driven</strong>
+                <span>Decisions based on your data, not guesswork</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual reveal" data-delay="0.2">
+            <div class="about-stats-card about-photo-card">
+              <img src="assets/img/xabier-urrutia.jpg" alt="Xabier Urrutia" class="about-photo" width="600" height="600" loading="lazy">
+              <div class="about-photo-name">Xabier Urrutia</div>
+              <div class="about-photo-role">Performance Marketing &amp; Growth</div>
+              <div class="about-divider"></div>
+              <ul class="about-facts" role="list">
+                <li><span>Experience</span><strong>Google · Meta · GroupM · Semrush</strong></li>
+                <li><span>Ad spend managed</span><strong>$100M+</strong></li>
+                <li><span>Freelance since</span><strong>2022</strong></li>
+                <li><span>Based in</span><strong>Barcelona</strong></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="cta-section" id="contact" aria-labelledby="cta-heading">
+      <div class="cta-bg" aria-hidden="true">
+        <div class="cta-orb cta-orb--1"></div>
+        <div class="cta-orb cta-orb--2"></div>
+        <div class="cta-orb cta-orb--3"></div>
+        <div class="cta-lines"></div>
+      </div>
+      <div class="container cta-content">
+        <span class="section-kicker mono reveal">Ready to Scale?</span>
+        <h2 id="cta-heading" class="cta-title reveal" data-delay="0.1">
+          Scale Faster With<br><em class="gradient-text">AI-Powered Advertising.</em>
+        </h2>
+        <p class="cta-sub reveal" data-delay="0.2">
+          Book a free 30-minute strategy call. I'll review your current setup,
+          identify quick wins and show you how I'd grow your business with AI.
+        </p>
+        <div class="cta-actions reveal" data-delay="0.3">
+          <a href="mailto:hello@zenshindigital.com?subject=Strategy%20call" class="btn btn-primary btn-large btn-glow">
+            Book Your Growth Strategy Call
+          </a>
+          <p class="cta-note mono">Free strategy call &nbsp;·&nbsp; No commitment</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="#" class="nav-logo" aria-label="Zenshin Digital — back to top">
+            <span class="nav-logo-icon" aria-hidden="true">Z</span>
+            <span class="nav-logo-text">Zenshin Digital</span>
+          </a>
+          <p class="footer-tagline">AI-Powered Performance Marketing.<br>Built for brands that demand results.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <h4 class="footer-col-title mono">Services</h4>
+            <ul role="list">
+              <li><a href="#services">Google Ads</a></li>
+              <li><a href="#services">Meta Ads</a></li>
+              <li><a href="#services">Amazon Ads</a></li>
+              <li><a href="#services">LinkedIn Ads</a></li>
+              <li><a href="#services">AI Creatives</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title mono">Company</h4>
+            <ul role="list">
+              <li><a href="#about">About</a></li>
+              <li><a href="blog/">Blog</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title mono">Contact</h4>
+            <ul role="list">
+              <li><a href="mailto:hello@zenshindigital.com">hello@zenshindigital.com</a></li>
+              <li><a href="#contact">Book a Strategy Call</a></li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mono">© 2026 Zenshin Digital. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts — IIFE, no ES modules, ?v= cache-busting -->
+  <script defer src="lib/gsap.min.js?v=20260523"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=20260523"></script>
+  <script defer src="lib/manifest.js?v=20260523"></script>
+  <script defer src="main.js?v=20261118"></script>
+</body>
+</html>
