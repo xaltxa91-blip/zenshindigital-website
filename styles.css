@@ -1679,3 +1679,5 @@ em { font-style: italic; }
 .about-founder .about-photo-name { font-size: 1.3rem; }
 .about-li { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.5rem; }
 .about-li svg { width: 16px; height: 16px; }
+
+img.nav-logo-icon { background: none; box-shadow: none; border-radius: 0; width: 34px; height: 34px; filter: drop-shadow(0 0 10px rgba(99,102,241,.35)); }

@@ -24,7 +24,9 @@ def nice(d):
     y, m, dd = map(int, d.split("-"))
     return date(y, m, dd).strftime("%B %-d, %Y")
 
-FAVICON = """<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%236366f1'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='19' fill='white'>Z</text></svg>" />"""
+FAVICON = """<link rel="icon" type="image/svg+xml" href="/assets/brand/zenshin-icon-dark-bg.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />"""
 
 def head(title, desc, url, image=None, extra=""):
     og_img = f'<meta property="og:image" content="{SITE}/blog/img/{image}" />' if image else ""
@@ -51,7 +53,7 @@ def head(title, desc, url, image=None, extra=""):
 </head>
 <body>
 <header class="bnav"><div class="bwrap bnav-in">
-  <a href="/" class="logo"><span class="logo-i">Z</span>Zenshin Digital</a>
+  <a href="/" class="logo"><img class="logo-i" src="/assets/brand/zenshin-icon.svg" alt="" width="32" height="32">Zenshin Digital</a>
   <nav><a href="/blog/">Blog</a><a href="/#about">About</a><a href="/#contact" class="btn">Book a Call</a></nav>
 </div></header>
 """
