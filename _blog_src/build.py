@@ -16,6 +16,8 @@ for f in os.listdir(os.path.join(here, "img")):
     shutil.copy(os.path.join(here, "img", f), os.path.join(blog, "img", f))
 shutil.copy(os.path.join(here, "blog.css"), os.path.join(blog, "blog.css"))
 
+import hashlib
+CSSV = hashlib.md5(open(os.path.join(here, "blog.css"), "rb").read()).hexdigest()[:8]
 posts = sorted(POSTS, key=lambda p: p["date"], reverse=True)
 e = html.escape
 def nice(d):
@@ -43,7 +45,7 @@ def head(title, desc, url, image=None, extra=""):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/blog/blog.css?v={posts[0]['date']}" />
+  <link rel="stylesheet" href="/blog/blog.css?v={CSSV}" />
   {FAVICON}
   {extra}
 </head>
@@ -113,11 +115,11 @@ for i, p in enumerate(posts):
 # index
 cards = "".join(f"""
   <a class="post" href="/blog/{p['slug']}.html">
-    {f'<img src="/blog/img/{p["image"]}" alt="" loading="lazy">' if p.get("image") else f'<div class="ph"><span>{e(p["platform"])}</span></div>'}
     <div class="post-b">
       <div class="meta"><span class="tag">{e(p['platform'])}</span><time datetime="{p['date']}">{nice(p['date'])}</time></div>
       <h2>{e(p['title'])}</h2>
       <p>{e(p['description'])}</p>
+      <span class="read">Read article →</span>
     </div>
   </a>""" for p in posts)
 idx = head("Paid Media News | Zenshin Digital Blog",
