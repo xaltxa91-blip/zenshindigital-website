@@ -1,7 +1,8 @@
 # Blog articles for zenshindigital.com/blog. Newest first is handled by date sort.
 # Rules: data only, no opinions. Every fact must come from an official platform page or a trusted
 # industry source, listed in `sources`. Facts that are not confirmed by the platform must say so.
-# image: a raw platform screenshot in _blog_src/img (optional). caption: shown under it.
+# image: a raw platform screenshot in _blog_src/img (optional), shown in a branded window frame.
+# shot_label: text in the frame's top bar (defaults to platform). caption: shown under it.
 # takeaways: 3-5 short bullet facts shown at the top. faq: list of (question, answer) pairs,
 # also output as FAQPage structured data for Google.
 
@@ -15,6 +16,7 @@ POSTS = [
     seo_title="Meta Ads: Up to 5 Existing Posts in One Ad (New Ads Manager Option)",
     description="Meta Ads Manager is showing a new option to add up to 5 published posts to a single ad, with Meta showing each person the post they're most likely to engage with. Here's what is confirmed and what is still unknown.",
     image="meta-ads-5-posts-screenshot.jpg",
+    shot_label="Meta Ads Manager",
     caption="Screenshot: my Meta Ads Manager, “0 of 5 posts selected” under Ad creative",
     takeaways=[
       "Under “Use existing posts”, advertisers can now select up to 5 published posts in one ad.",

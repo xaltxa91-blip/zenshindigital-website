@@ -60,9 +60,16 @@ pre code { background: none; padding: 0; white-space: pre-wrap; word-break: brea
 .sources { margin-top: 2.4rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
 .sources h2 { font-size: 1rem; margin-top: 0; }
 .sources li { font-size: .95rem; }
-.shot { margin: 0 0 2rem; }
-.shot img { border-radius: 14px; border: 1px solid var(--line); margin: 0 auto; max-height: 720px; width: auto; background: #fff; }
-.shot figcaption { text-align: center; font-size: .85rem; color: var(--dim); margin-top: .6rem; }
+.shot { margin: 0 0 2.25rem; }
+.shot-frame { position: relative; border-radius: 18px; padding: 1px; background: linear-gradient(135deg, rgba(99,102,241,.9), rgba(34,211,238,.6) 50%, rgba(99,102,241,.25));
+  box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 60px rgba(99,102,241,.18); }
+.shot-bar { display: flex; align-items: center; gap: 7px; padding: 11px 16px; background: #10101f; border-radius: 17px 17px 0 0; border-bottom: 1px solid var(--line); }
+.shot-bar i { width: 10px; height: 10px; border-radius: 50%; background: #3a3a55; display: block; }
+.shot-bar i:nth-child(1) { background: #ff5f57; } .shot-bar i:nth-child(2) { background: #febc2e; } .shot-bar i:nth-child(3) { background: #28c840; }
+.shot-bar span { margin-left: 10px; font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; color: var(--muted); text-transform: uppercase; }
+.shot-body { background: radial-gradient(500px 260px at 50% 0%, rgba(99,102,241,.22), transparent 70%), #0b0b18; border-radius: 0 0 17px 17px; padding: clamp(16px, 4vw, 36px); }
+.shot-body img { margin: 0 auto; max-height: 620px; width: auto; border-radius: 10px; background: #fff; box-shadow: 0 12px 40px rgba(0,0,0,.45); }
+.shot figcaption { text-align: center; font-size: .85rem; color: var(--dim); margin-top: .8rem; }
 .author { display: flex; gap: 16px; align-items: center; margin-top: 2.5rem; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); }
 .author img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); flex-shrink: 0; }
 .author strong { display: block; font-family: var(--display); font-size: 1.05rem; }

@@ -99,7 +99,9 @@ for i, p in enumerate(posts):
     upd = f' · Updated {nice(p["modified"])}' if p.get("modified") and p["modified"] != p["date"] else ""
     others = [q for q in posts if q is not p][:3]
     more = "".join(f'<a class="more-item" href="/blog/{q["slug"]}.html"><span class="tag">{e(q["platform"])}</span>{e(q["title"])}</a>' for q in others)
-    shot = (f'<figure class="shot"><img src="/blog/img/{p["image"]}" alt="{e(p.get("caption") or p["title"])}">'
+    shot = (f'<figure class="shot"><div class="shot-frame">'
+            f'<div class="shot-bar"><i></i><i></i><i></i><span>{e(p.get("shot_label") or p["platform"])}</span></div>'
+            f'<div class="shot-body"><img src="/blog/img/{p["image"]}" alt="{e(p.get("caption") or p["title"])}"></div></div>'
             + (f'<figcaption>{e(p["caption"])}</figcaption>' if p.get("caption") else '') + '</figure>') if p.get("image") else ""
     page = head(f"{p.get('seo_title', p['title'])} | Zenshin Digital", p["description"], url, p["image"], extra) + f"""
 <main class="bwrap art">
