@@ -81,25 +81,28 @@ def src_html(sources):
 # article pages
 for i, p in enumerate(posts):
     url = f"{SITE}/blog/{p['slug']}.html"
+    img_url = [f"{SITE}/blog/img/{p['image']}"] if p.get("image") else []
     ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": p["title"],
           "description": p["description"], "datePublished": p["date"], "dateModified": p["date"],
-          "image": [f"{SITE}/blog/img/{p['image']}"], "mainEntityOfPage": url,
+          "image": img_url, "mainEntityOfPage": url,
           "author": {"@type": "Person", "name": "Xabier Urrutia", "url": f"{SITE}/#about"},
           "publisher": {"@type": "Organization", "name": "Zenshin Digital", "url": SITE}}
     extra = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
     others = [q for q in posts if q is not p][:3]
     more = "".join(f'<a class="more-item" href="/blog/{q["slug"]}.html"><span class="tag">{e(q["platform"])}</span>{e(q["title"])}</a>' for q in others)
+    shot = (f'<figure class="shot"><img src="/blog/img/{p["image"]}" alt="{e(p.get("caption") or p["title"])}">'
+            + (f'<figcaption>{e(p["caption"])}</figcaption>' if p.get("caption") else '') + '</figure>') if p.get("image") else ""
     page = head(f"{p['title']} | Zenshin Digital", p["description"], url, p["image"], extra) + f"""
 <main class="bwrap art">
   <a class="back" href="/blog/">← All articles</a>
   <div class="meta"><span class="tag">{e(p['platform'])}</span><time datetime="{p['date']}">{nice(p['date'])}</time></div>
   <h1>{e(p['title'])}</h1>
   <p class="lede">{e(p['description'])}</p>
+  {shot}
   <div class="content">
     {p['body']}
     {src_html(p['sources'])}
   </div>
-  <figure class="card-img"><img src="/blog/img/{p['image']}" alt="{e(p['title'])}" width="1080" height="1350" loading="lazy"></figure>
   {AUTHOR}
   {CTA}
   {'<section class="more"><h2>More paid media news</h2>' + more + '</section>' if others else ''}
@@ -110,7 +113,7 @@ for i, p in enumerate(posts):
 # index
 cards = "".join(f"""
   <a class="post" href="/blog/{p['slug']}.html">
-    <img src="/blog/img/{p['image']}" alt="" width="1080" height="1350" loading="lazy">
+    {f'<img src="/blog/img/{p["image"]}" alt="" loading="lazy">' if p.get("image") else f'<div class="ph"><span>{e(p["platform"])}</span></div>'}
     <div class="post-b">
       <div class="meta"><span class="tag">{e(p['platform'])}</span><time datetime="{p['date']}">{nice(p['date'])}</time></div>
       <h2>{e(p['title'])}</h2>

@@ -1,5 +1,6 @@
 # Blog articles for zenshindigital.com/blog — newest first is handled by date sort.
 # Each body is HTML. Data only, no opinions.
+# image: a raw platform screenshot in _blog_src/img (optional, None if none). caption: shown under it.
 
 POSTS = [
   dict(
@@ -8,7 +9,8 @@ POSTS = [
     platform="Meta Ads",
     title="Meta Ads Manager: up to 5 existing posts in one ad",
     description="Some Meta Ads Manager accounts can now select up to 5 published posts in a single ad. Meta has not announced it yet.",
-    image="meta-ads-5-existing-posts-one-ad.jpg",
+    image="meta-ads-5-posts-screenshot.jpg",
+    caption="Screenshot: my Meta Ads Manager",
     body="""
 <p>Some Meta Ads Manager accounts now show a new option: under <strong>“Use existing posts”</strong>, advertisers can select <strong>up to 5 published posts in one ad</strong>. I found it in my own Ads Manager account.</p>
 <h2>What's new</h2>
@@ -30,7 +32,7 @@ POSTS = [
     platform="Amazon Ads",
     title="Amazon Ads bans claims like “Unbeatable price” in ad copy",
     description="Amazon Ads updated its advertising copy policy on November 15, 2026. Price claims such as “Best price” or “Wholesale price” are no longer allowed on Amazon's own placements.",
-    image="amazon-ads-price-claims-policy.jpg",
+    image=None,
     body="""
 <p>Amazon Ads updated its <strong>advertising copy policy</strong> on <strong>November 15, 2026</strong>. The changes apply to ads on Amazon's own placements.</p>
 <h2>Example phrases now banned in ads</h2>
@@ -57,7 +59,7 @@ POSTS = [
     platform="Google Ads",
     title="Google Ads: new {search_term_matchtype} parameter shows AI Max expansion clicks",
     description="A new ValueTrack parameter, {search_term_matchtype}, shows when a click on an exact-match keyword actually came from an AI Max expansion.",
-    image="google-ai-max-search-term-matchtype.jpg",
+    image=None,
     body="""
 <p>Google Ads has documented a new ValueTrack parameter, <code>{search_term_matchtype}</code>. It shows how the search term actually matched, including clicks that came from <strong>AI Max</strong> expansions.</p>
 <h2>Same click, two parameters</h2>
