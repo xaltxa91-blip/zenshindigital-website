@@ -8,6 +8,70 @@
 
 POSTS = [
   dict(
+    slug="microsoft-ads-automated-bidding-upgrade",
+    date="2026-11-19",
+    modified="2026-11-19",
+    platform="Microsoft Ads",
+    title="Microsoft Ads rolls out its biggest bidding upgrade in a decade",
+    seo_title="Microsoft Ads Automated Bidding Upgrade: tCPA, tROAS & Pacing (Nov 2026)",
+    description="Microsoft Advertising is upgrading its automated bidding models: bids adjust nearly twice as fast to new CPA and ROAS targets, hit targets more consistently and pace budgets more evenly. Here are the details, Microsoft's data and its recommendations.",
+    image=None,
+    takeaways=[
+      "Microsoft Advertising calls it its “biggest upgrade to bidding models in a decade”.",
+      "Bids adjust nearly twice as quickly when advertisers change a CPA or ROAS target.",
+      "Bids meet CPA and ROAS targets more consistently, and budgets pace more evenly through the day.",
+      "The upgrade is applied automatically and is rolling out to more accounts over time.",
+      "Microsoft recommends changing targets in 15% steps and not using maximum CPC limits.",
+    ],
+    body="""
+<p>Microsoft Advertising announced on <strong>November 18, 2026</strong> what it calls its <strong>“biggest upgrade to bidding models in a decade”</strong>. The announcement, by Carlo Buchmann, Principal Product Manager at Microsoft Advertising, covers automated bid strategies including <strong>Maximize Conversion Value, Target ROAS, Target CPA</strong> (Maximize Conversions with a CPA target) and <strong>Enhanced CPC</strong>.</p>
+<p>The upgrade is applied automatically. Microsoft describes it as “the first stage” of its updates, with improvements rolling out to more accounts over time and “more to come in 2027”.</p>
+
+<h2>What changes</h2>
+<ul>
+  <li><strong>Speed:</strong> “Bids adjust nearly twice as quickly when advertisers update a CPA or ROAS target.”</li>
+  <li><strong>Consistency:</strong> bids meet CPA and ROAS targets more consistently, without sacrificing volume or value.</li>
+  <li><strong>Pacing:</strong> budgets pace more evenly throughout the day, and campaigns ramp up to full budget faster.</li>
+</ul>
+
+<h2>Microsoft's reported results</h2>
+<p>Microsoft shared these figures from its own internal data:</p>
+<div class="tbl"><table>
+  <thead><tr><th>Bid strategy</th><th>Result</th><th>Data</th></tr></thead>
+  <tbody>
+    <tr><td>Maximize Conversion Value or Target ROAS</td><td>About 10% more conversion value per click at similar ROAS</td><td>Global, Search and Audience Network, August 2026</td></tr>
+    <tr><td>Search campaigns moving from Target CPA to Target ROAS</td><td>About 8% more conversion value on average at similar ROAS</td><td>Global, August–September 2026</td></tr>
+    <tr><td>Moving from Enhanced CPC to Maximize Conversions with a CPA target</td><td>About 18% more conversions at a similar cost per action</td><td>Global, June–July 2026</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Microsoft's recommendations</h2>
+<ol>
+  <li><strong>Set up conversion tracking.</strong> Automated bidding needs it. Microsoft recommends Universal Event Tracking (UET), with the Conversions API alongside it for broader coverage. Offline conversion import is another option.</li>
+  <li><strong>Pick the strategy based on conversion volume.</strong> With at least 5 conversions, start with a conversion-based strategy instead of Enhanced CPC. With fewer than 5, start with Enhanced CPC to build conversion history, then move to Maximize Conversions (with a target CPA) or Maximize Conversion Value (with a target ROAS).</li>
+  <li><strong>Change targets in 15% steps.</strong> Targets can be changed at any time, but large CPA increases or ROAS decreases can cause short-term volatility while the system recalibrates. Microsoft recommends changes of 15% at a time, reviewed after one conversion cycle.</li>
+  <li><strong>Don't use maximum CPC limits.</strong> According to Microsoft, a max CPC overrides CPA and ROAS targets and can cause missed goals, even when the cap is above the average CPC. Microsoft suggests budgets, bid targets and conversion value rules instead.</li>
+  <li><strong>Evaluate at the right level.</strong> Ideally wait for 30 conversions in 30 days, review 1–2 conversion cycles after major changes, and judge results at campaign or portfolio level by conversions and CPA or ROAS, not by keyword CPCs.</li>
+</ol>
+
+<h2>Changes that cause volatility</h2>
+<p>According to Microsoft, major changes such as launching a new campaign, switching bid strategy, or adding or removing conversion goals tend to cause volatility while the bidding system calibrates.</p>
+""",
+    faq=[
+      ("Do I need to opt in to the new Microsoft Ads bidding models?",
+       "No. Microsoft applies the upgrade automatically and is rolling it out to more accounts over time."),
+      ("Which bid strategies are affected?",
+       "Microsoft's announcement names Maximize Conversion Value, Target ROAS, Target CPA (Maximize Conversions with a CPA target) and Enhanced CPC."),
+      ("How much should I change my CPA or ROAS target at once?",
+       "Microsoft recommends changing targets in 15% increments and reviewing the results after one conversion cycle."),
+      ("Should I use a maximum CPC with automated bidding?",
+       "Microsoft does not recommend it: a max CPC overrides CPA and ROAS targets and can cause missed goals, even when it is set above the average CPC."),
+    ],
+    sources=[
+      ("Microsoft Advertising blog: Building the next generation of automated bidding at Microsoft Advertising", "https://about.ads.microsoft.com/en/blog/post/november-2026/building-the-next-generation-of-automated-bidding-at-microsoft-advertising"),
+    ],
+  ),
+  dict(
     slug="meta-ads-5-existing-posts-one-ad",
     date="2026-11-18",
     modified="2026-11-18",
