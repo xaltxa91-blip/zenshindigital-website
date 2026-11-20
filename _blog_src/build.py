@@ -7,6 +7,7 @@ from datetime import date
 sys.path.insert(0, os.path.dirname(__file__))
 from posts import POSTS
 from channels import CHANNELS
+from og import render_all
 
 SITE = "https://zenshindigital.com"
 out = sys.argv[1]
@@ -30,7 +31,8 @@ FAVICON = """<link rel="icon" type="image/svg+xml" href="/assets/brand/zenshin-i
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />"""
 
 def head(title, desc, url, image=None, extra="", body_class="light", og_type="article"):
-    og_img = f'<meta property="og:image" content="{SITE}/blog/img/{image}" />' if image else ""
+    og_img = (f'<meta property="og:image" content="{image}" />\n  <meta property="og:image:width" content="1200" />\n'
+              f'  <meta property="og:image:height" content="630" />\n  <meta name="twitter:image" content="{image}" />') if image else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +91,7 @@ for i, p in enumerate(posts):
     img_url = [f"{SITE}/blog/img/{p['image']}"] if p.get("image") else []
     ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": p["title"],
           "description": p["description"], "datePublished": p["date"], "dateModified": p.get("modified", p["date"]),
-          "image": img_url, "mainEntityOfPage": url,
+          "image": img_url or [f"{SITE}/blog/og/{p['slug']}.png"], "mainEntityOfPage": url,
           "author": {"@type": "Person", "name": "Xabier Urrutia", "url": f"{SITE}/#about"},
           "publisher": {"@type": "Organization", "name": "Zenshin Digital", "url": SITE}}
     extra = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
@@ -108,7 +110,7 @@ for i, p in enumerate(posts):
             + (f'<figcaption>{e(p["caption"])}</figcaption>' if p.get("caption") else '') + '</figure>') if p.get("image") else ""
     ch = next((c for c in CHANNELS if c["platform"] == p["platform"]), None)
     svc_link = f'<a class="svc-link" href="/{ch["slug"]}.html">Need help with {e(ch["platform"])}? See our {e(ch["platform"])} services →</a>' if ch else ""
-    page = head(f"{p.get('seo_title', p['title'])} | Zenshin Digital", p["description"], url, p["image"], extra) + f"""
+    page = head(f"{p.get('seo_title', p['title'])} | Zenshin Digital", p["description"], url, f"{SITE}/blog/og/{p['slug']}.png", extra) + f"""
 <main class="bwrap art">
   <a class="back" href="/blog/">← All articles</a>
   <div class="meta"><span class="tag">{e(p['platform'])}</span><time datetime="{p['date']}">{nice(p['date'])}</time><span>{upd.lstrip(' · ') if upd else ''}</span><span>By Xabier Urrutia</span></div>
@@ -141,7 +143,7 @@ cards = "".join(f"""
   </a>""" for p in posts)
 idx = head("Paid Media News | Zenshin Digital Blog",
            "The latest updates from Google Ads, Meta Ads, Amazon Ads, LinkedIn Ads, TikTok Ads and more, checked against official sources.",
-           f"{SITE}/blog/") + f"""
+           f"{SITE}/blog/", f"{SITE}/blog/og/blog.png", og_type="website") + f"""
 <main class="bwrap">
   <section class="bhero">
     <span class="kicker">Blog</span>
@@ -172,7 +174,7 @@ for c in CHANNELS:
           {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in c["faq"]]}
     extra = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n  <script type="application/ld+json">{json.dumps(fq, ensure_ascii=False)}</script>'
     others = " · ".join(f'<a href="/{o["slug"]}.html">{e(o["platform"])}</a>' for o in CHANNELS if o is not c)
-    page = head(f"{c['seo_title']} | Zenshin Digital", c["description"], url, None, extra, body_class="svc", og_type="website") + f"""
+    page = head(f"{c['seo_title']} | Zenshin Digital", c["description"], url, f"{SITE}/blog/og/{c['slug']}.png", extra, body_class="svc", og_type="website") + f"""
 <main class="bwrap svcp">
   <section class="svc-hero">
     <span class="kicker">Services · {e(c['platform'])}</span>
@@ -202,6 +204,13 @@ for c in CHANNELS:
 </main>
 """ + FOOT
     open(os.path.join(out, f"{c['slug']}.html"), "w", encoding="utf-8").write(page)
+
+# social preview images
+jobs = [(f"{p['slug']}.png", p["platform"], p["title"], f"zenshindigital.com/blog · {nice(p['date'])}") for p in posts]
+jobs += [(f"{c['slug']}.png", "Services", f"{c['platform']} Management", "zenshindigital.com") for c in CHANNELS]
+jobs += [("home.png", "", "Paid Media, Powered by AI. Google, Meta, Amazon, LinkedIn, TikTok and ChatGPT Ads.", "zenshindigital.com")]
+jobs += [("blog.png", "Blog", "Paid Media News: the latest updates from Google, Meta, Amazon, LinkedIn, TikTok and more", "zenshindigital.com/blog")]
+print("og images rendered:", render_all(jobs, os.path.join(blog, "og")))
 
 # sitemap + robots
 urls = [(f"{SITE}/", posts[0]["date"]), (f"{SITE}/blog/", posts[0]["date"])] + [(f"{SITE}/{c['slug']}.html", max([c["reviewed"]] + [p["date"] for p in posts if p["platform"] == c["platform"]])) for c in CHANNELS] + [(f"{SITE}/blog/{p['slug']}.html", p["date"]) for p in posts]
