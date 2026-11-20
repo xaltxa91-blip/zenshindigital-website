@@ -8,6 +8,77 @@
 
 POSTS = [
   dict(
+    slug="microsoft-ads-bing-ai-overviews-november-2026",
+    date="2026-11-20",
+    modified="2026-11-20",
+    platform="Microsoft Ads",
+    title="Microsoft Ads now shows ads in Bing's AI Overviews, plus 5 more November updates",
+    seo_title="Microsoft Ads in Bing AI Overviews + What's New in November 2026",
+    description="Ads in AI Overviews on Bing are now available in all markets except China, served through existing campaigns including Performance Max and AI Max. Plus AI Max URL inclusions, Discover feed ads, AI content labels, Xbox Video for Brands and the Microsoft Advertising MCP server.",
+    image=None,
+    takeaways=[
+      "Ads can now appear next to AI Overviews on Bing, in all markets except China.",
+      "No separate campaign is needed: ads serve through existing campaigns, including Performance Max and AI Max.",
+      "AI Max now supports URL inclusions, to choose which site sections it can use.",
+      "AI content transparency controls, to declare AI-generated images and videos, are generally available.",
+      "Microsoft also announced ads in its new Discover feed and Xbox Video for Brands.",
+    ],
+    body="""
+<p>Microsoft Advertising published its monthly product update on <strong>November 19, 2026</strong>. The biggest change: <strong>ads in AI Overviews on Bing</strong> are now available in all markets except China. Here is everything in the update.</p>
+
+<h2>Ads in AI Overviews on Bing</h2>
+<p>AI Overviews are the AI-generated summaries shown at the top of some Bing results. Ads can now appear next to them when an advertiser's offer is relevant. Microsoft's example: a travel offer shown beside an AI-generated itinerary for Snowdonia National Park.</p>
+<ul>
+  <li><strong>Markets:</strong> “Ads in AI Overviews are now available in all markets except China.”</li>
+  <li><strong>Campaigns:</strong> no separate campaign setup is required. Ads serve through existing campaigns, including <strong>Performance Max</strong> and <strong>AI Max</strong>.</li>
+  <li><strong>Context:</strong> the placement follows <strong>ads in Copilot</strong>, Microsoft's ads in its AI assistant.</li>
+  <li><strong>Not covered in the announcement:</strong> reporting for the placement and specific ad formats.</li>
+</ul>
+
+<h2>AI Max URL inclusions</h2>
+<p>Rolling out now. Advertisers can specify which sections of their website AI Max can use, both as traffic destinations and as sources for ad text and search term matching. Microsoft's example: adding holiday gift guide pages. It builds on the messaging guidelines Microsoft added to AI Max in October 2026.</p>
+
+<h2>Ads in Discover</h2>
+<p>Discover is Microsoft's new AI-powered content feed on the Microsoft Edge desktop new tab page and in Windows. According to Microsoft:</p>
+<ul>
+  <li>It is backed by trusted publishers and more than 3,500 creators.</li>
+  <li>It shows 35% fewer ads per page than classic MSN (October 2026 internal data).</li>
+  <li>Ads in Discover show 35% higher viewability and 8–12% higher click-through rates.</li>
+  <li>It is live in the US, Canada, UK, Australia and India. Advertisers should contact their account team.</li>
+</ul>
+
+<h2>AI content transparency controls</h2>
+<p>Now generally available. Advertisers can declare whether images or videos are AI-generated and choose a visible watermark where supported.</p>
+<ul>
+  <li>Declarations can be managed in bulk through the Ads Studio Library, the APIs and product feeds.</li>
+  <li>Microsoft's AI detection signals are available as a reference, but advertisers remain responsible for their declarations.</li>
+  <li>Covered: Product Ads, Multimedia Ads, Audience Ads, Display Ads, Video Ads and Performance Max assets.</li>
+</ul>
+
+<h2>Xbox Video for Brands</h2>
+<p>Introduced earlier in November: full-screen, non-skippable video ads that play before cloud gaming sessions and help eligible players unlock access, without interrupting active gameplay. Advertisers can reuse existing premium video or CTV creative.</p>
+
+<h2>Microsoft Advertising MCP server</h2>
+<p>The MCP server connects AI assistants such as Copilot, ChatGPT and Claude to a Microsoft Advertising account, to ask plain-language questions about performance, creative, conversion tracking, targeting and policy reviews, and to make account changes. It has been in open pilot since July 2026.</p>
+
+<h2>Automated bidding upgrade</h2>
+<p>The update also recaps the bidding upgrade announced earlier in the week: bids meet CPA and ROAS targets more consistently, adjust nearly twice as fast after target changes, and pace budgets more evenly. <a href="/blog/microsoft-ads-automated-bidding-upgrade.html">Read our full article on the bidding upgrade</a>.</p>
+""",
+    faq=[
+      ("Where are ads in AI Overviews on Bing available?",
+       "In all markets except China, according to Microsoft Advertising's November 2026 update."),
+      ("Do I need a new campaign to show ads in Bing AI Overviews?",
+       "No. Microsoft says no separate campaign setup is required. Ads serve through existing campaigns, including Performance Max and AI Max."),
+      ("What are AI Max URL inclusions?",
+       "A setting that lets advertisers choose which sections of their website AI Max can use as landing pages and as sources for ad text and search term matching."),
+      ("Where is Microsoft's Discover feed available?",
+       "On the Microsoft Edge desktop new tab page and in Windows, live in the US, Canada, UK, Australia and India."),
+    ],
+    sources=[
+      ("Microsoft Advertising blog: What's new in Microsoft Advertising this November", "https://about.ads.microsoft.com/en/blog/post/november-2026/put-ai-to-work-engaging-customers-in-more-places-whats-new-in-microsoft-advertising-this-november"),
+    ],
+  ),
+  dict(
     slug="microsoft-ads-automated-bidding-upgrade",
     date="2026-11-19",
     modified="2026-11-19",
