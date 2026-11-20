@@ -27,7 +27,7 @@ POSTS = [
 <p>Microsoft Advertising published its monthly product update on <strong>November 19, 2026</strong>. The biggest change: <strong>ads in AI Overviews on Bing</strong> are now available in all markets except China. Here is everything in the update.</p>
 
 <h2>Ads in AI Overviews on Bing</h2>
-<p>AI Overviews are the AI-generated summaries shown at the top of some Bing results. Ads can now appear next to them when an advertiser's offer is relevant. Microsoft's example: a travel offer shown beside an AI-generated itinerary for Snowdonia National Park.</p>
+<p>AI Overviews are AI-generated summaries in Bing search results. Ads can now appear next to them when an advertiser's offer is relevant. Microsoft's example: a travel offer shown beside an AI-generated itinerary for Snowdonia National Park.</p>
 <ul>
   <li><strong>Markets:</strong> “Ads in AI Overviews are now available in all markets except China.”</li>
   <li><strong>Campaigns:</strong> no separate campaign setup is required. Ads serve through existing campaigns, including <strong>Performance Max</strong> and <strong>AI Max</strong>.</li>
