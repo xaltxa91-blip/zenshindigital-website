@@ -8,6 +8,68 @@
 
 POSTS = [
   dict(
+    slug="google-ads-under-re-review-status",
+    date="2026-11-22",
+    modified="2026-11-22",
+    platform="Google Ads",
+    title="Google explains the “Under re-review” ad status: why approved ads stop serving",
+    seo_title="Google Ads “Under re-review” Status Explained: Triggers, Duration & Appeals",
+    description="Google has updated its policy documentation to explain the “Under re-review” status: previously approved ads can be re-reviewed when the ad, landing page or account is flagged. The ads show “Eligible (limited)” and don't serve, typically for up to 48 hours.",
+    image=None,
+    takeaways=[
+      "Previously approved ads or assets can be re-reviewed if they, their landing page or the associated account get flagged.",
+      "During a re-review, the ad shows as “Eligible (limited)” and does not serve.",
+      "Re-reviews typically conclude within 48 hours, though this is not guaranteed.",
+      "The re-review itself can't be appealed, because it is not a policy decision. A resulting disapproval or suspension can be.",
+    ],
+    body="""
+<p>Google has updated its policy documentation to explain the <strong>“Under re-review”</strong> ad status, according to PPC News Feed, which reported the change on <strong>November 21, 2026</strong>. The update was spotted by Hana Kobzová. The status itself is not new: advertisers first spotted it in their accounts in August 2026. What's new is Google's official explanation.</p>
+
+<h2>What triggers a re-review</h2>
+<p>Ads and assets that were already approved can be reviewed again. According to the updated documentation, a re-review can happen when any of these gets flagged:</p>
+<ul>
+  <li>the <strong>ad or asset</strong> itself</li>
+  <li>its <strong>destination</strong> (the landing page)</li>
+  <li>the <strong>associated account</strong></li>
+</ul>
+
+<h2>What happens during the re-review</h2>
+<div class="tbl"><table>
+  <thead><tr><th>Question</th><th>Answer</th></tr></thead>
+  <tbody>
+    <tr><td>Which status is shown?</td><td>“Eligible (limited)”</td></tr>
+    <tr><td>Does the ad serve?</td><td>No. Ads under re-review do not serve.</td></tr>
+    <tr><td>How long does it take?</td><td>Re-reviews typically conclude within 48 hours. This is typical, not guaranteed.</td></tr>
+    <tr><td>Can I appeal?</td><td>Not the re-review itself, because it is not a policy decision. If it ends in a disapproval or suspension, those decisions can be appealed.</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Why it matters this week</h2>
+<p>Black Friday falls on <strong>November 27, 2026</strong>. Because an ad under re-review does not serve while it shows “Eligible (limited)”, an approved ad can stop delivering without being disapproved, and there is no appeal to speed it up.</p>
+
+<h2>How to check your ads</h2>
+<ol>
+  <li>In Google Ads, open <strong>Campaigns → Ads</strong> (or <strong>Assets</strong>) and look at the <strong>Status</strong> column.</li>
+  <li>Hover over an “Eligible (limited)” status to see the reason: it can mean a re-review or a policy restriction, such as location or age limits.</li>
+  <li>If an ad or asset is under re-review, there is no appeal for the re-review itself. If it ends in a disapproval, you can fix the ad or appeal the decision from the <strong>Policy manager</strong>.</li>
+</ol>
+""",
+    faq=[
+      ("What does “Under re-review” mean in Google Ads?",
+       "A previously approved ad or asset is being reviewed again because the ad, its landing page or the associated account was flagged."),
+      ("Does an ad under re-review still serve?",
+       "No. During the re-review the ad shows “Eligible (limited)” and does not serve."),
+      ("How long does a Google Ads re-review take?",
+       "Re-reviews typically conclude within 48 hours, but this is not guaranteed."),
+      ("Can I appeal a re-review?",
+       "No. The re-review is not a policy decision, so it can't be appealed. If it ends in a disapproval or suspension, you can appeal that decision."),
+    ],
+    sources=[
+      ("PPC News Feed: Google explains “Under re-review” ad status (November 21, 2026)", "https://ppcnewsfeed.com/ppc-news/2026-11/google-explains-under-re-review-ad-status/"),
+      ("Google Ads Help: About the ad review process", "https://support.google.com/adspolicy/answer/1722120"),
+    ],
+  ),
+  dict(
     slug="microsoft-ads-bing-ai-overviews-november-2026",
     date="2026-11-20",
     modified="2026-11-20",
