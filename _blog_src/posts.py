@@ -8,6 +8,61 @@
 
 POSTS = [
   dict(
+    slug="youtube-shorts-ads-likes-engaged-view-conversions",
+    date="2026-11-23",
+    modified="2026-11-23",
+    platform="Google Ads",
+    title="YouTube Shorts ads: a like, comment or share now counts for engaged-view conversions",
+    seo_title="YouTube Shorts Ads: Likes, Comments & Shares Now Count for Engaged-View Conversions",
+    description="Google now counts a like, comment or share on a YouTube Shorts ad the same way as 5 seconds of viewing when deciding whether a later conversion gets engaged-view credit. Here's what changed and what was already in place.",
+    image=None,
+    takeaways=[
+      "A like, comment or share on a YouTube Shorts ad now qualifies for an engaged-view conversion (EVC), like 5 seconds of viewing or a call-to-action click.",
+      "The viewer still has to convert within the engaged-view conversion window.",
+      "Likes, comments and shares already counted as engagements and TrueView views on Shorts ads.",
+      "In Video view campaigns billed per view, those interactions can be billable events.",
+    ],
+    body="""
+<p>Google has changed what it takes for a <strong>YouTube Shorts ad</strong> to earn an <strong>engaged-view conversion (EVC)</strong>. A like, comment or share on the ad now counts the same way as five seconds of viewing. The change appears in Google's help page “About YouTube ads and view metrics”, and was reported by PPC Land on November 22, 2026. Adriaan Dekker flagged it on November 21.</p>
+
+<h2>The new engaged-view conversion definition</h2>
+<p>Google's help page now reads: <em>“YouTube Shorts engaged view conversion (EVC) counted, when a viewer watches 5 seconds of the ad, clicks the call-to-action on the video ad, or the user clicks the like, comment, or share button on the video ad, and then converts within the Engaged-view conversion window.”</em></p>
+<div class="tbl"><table>
+  <thead><tr><th>Engaged-view conversion on Shorts</th><th>Before</th><th>Now</th></tr></thead>
+  <tbody>
+    <tr><td>Viewer watches 5 seconds</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Viewer clicks the call-to-action</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Viewer likes, comments or shares</td><td>No</td><td>Yes</td></tr>
+  </tbody>
+</table></div>
+<p>In all cases, the viewer must then convert within the engaged-view conversion window.</p>
+
+<h2>What was already in place</h2>
+<p>For other Shorts ad metrics, likes, comments and shares already counted before this change:</p>
+<ul>
+  <li><strong>Engagements:</strong> counted when viewers watch 5 seconds, click the call-to-action, or click like, comment or share.</li>
+  <li><strong>TrueView views:</strong> counted when a viewer watches 10 seconds or until the end of the video (whichever comes first), clicks the call-to-action, or clicks like, comment or share.</li>
+  <li><strong>Billing:</strong> according to Google's FAQ, “For Video View campaigns billed to views, views, clicks on the like, comment, or share button would become billable events.”</li>
+</ul>
+
+<h2>What it means for reporting</h2>
+<p>Because more interactions now qualify, Shorts ads can record more engaged-view conversions than before for the same activity. When comparing EVC numbers before and after the change, the new definition is a factor to take into account.</p>
+""",
+    faq=[
+      ("What is an engaged-view conversion on YouTube Shorts?",
+       "A conversion counted when a viewer watches 5 seconds of a Shorts ad, clicks its call-to-action, or clicks like, comment or share, and then converts within the engaged-view conversion window."),
+      ("Does a like on a Shorts ad count as a view?",
+       "Yes. On Shorts ads, a TrueView view is counted when a viewer clicks the like, comment or share button, as well as after 10 seconds of viewing (or the full video if shorter) or a call-to-action click."),
+      ("Can likes on Shorts ads cost money?",
+       "In Video view campaigns billed per view, Google says clicks on the like, comment or share button can become billable events."),
+    ],
+    sources=[
+      ("Google Ads Help: About YouTube ads and view metrics", "https://support.google.com/google-ads/answer/2375431"),
+      ("Google Ads Help: Frequently asked questions", "https://support.google.com/google-ads/answer/16041383"),
+      ("PPC Land: Google lets a like stand in for 5 seconds of viewing in Shorts conversions", "https://ppc.land/google-lets-a-like-stand-in-for-5-seconds-of-viewing-in-shorts-conversions/"),
+    ],
+  ),
+  dict(
     slug="google-ads-under-re-review-status",
     date="2026-11-22",
     modified="2026-11-22",
