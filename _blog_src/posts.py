@@ -14,12 +14,12 @@ POSTS = [
     platform="Google Ads",
     title="YouTube Shorts ads: a like, comment or share now counts for engaged-view conversions",
     seo_title="YouTube Shorts Ads: Likes, Comments & Shares Now Count for Engaged-View Conversions",
-    description="Google now counts a like, comment or share on a YouTube Shorts ad the same way as 5 seconds of viewing when deciding whether a later conversion gets engaged-view credit. Here's what changed and what was already in place.",
+    description="Google now counts a like, comment or share on a YouTube Shorts ad the same way as 5 seconds of viewing when deciding whether a later conversion gets engaged-view credit. Here's what changed and how other Shorts metrics count.",
     image=None,
     takeaways=[
       "A like, comment or share on a YouTube Shorts ad now qualifies for an engaged-view conversion (EVC), like 5 seconds of viewing or a call-to-action click.",
       "The viewer still has to convert within the engaged-view conversion window.",
-      "Likes, comments and shares already counted as engagements and TrueView views on Shorts ads.",
+      "Likes, comments and shares also count as engagements and TrueView views on Shorts ads.",
       "In Video view campaigns billed per view, those interactions can be billable events.",
     ],
     body="""
@@ -37,8 +37,8 @@ POSTS = [
 </table></div>
 <p>In all cases, the viewer must then convert within the engaged-view conversion window.</p>
 
-<h2>What was already in place</h2>
-<p>For other Shorts ad metrics, likes, comments and shares already counted before this change:</p>
+<h2>Other Shorts metrics</h2>
+<p>Google's help page also lists likes, comments and shares for these Shorts ad metrics:</p>
 <ul>
   <li><strong>Engagements:</strong> counted when viewers watch 5 seconds, click the call-to-action, or click like, comment or share.</li>
   <li><strong>TrueView views:</strong> counted when a viewer watches 10 seconds or until the end of the video (whichever comes first), clicks the call-to-action, or clicks like, comment or share.</li>
