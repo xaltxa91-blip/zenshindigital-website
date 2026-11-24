@@ -8,6 +8,69 @@
 
 POSTS = [
   dict(
+    slug="microsoft-advertising-pinterest-integration",
+    date="2026-11-24",
+    modified="2026-11-24",
+    platform="Microsoft Ads",
+    title="Microsoft Advertising campaigns can now run on Pinterest",
+    seo_title="Microsoft Advertising x Pinterest Integration: Where Ads Run, Markets & Details",
+    description="Pinterest and Microsoft Advertising announced an integration that lets eligible Microsoft Advertising campaigns extend to Pinterest's home feed, search and related Pins, starting in North America, Australia and New Zealand, without new buying tools.",
+    image=None,
+    takeaways=[
+      "Eligible Microsoft Advertising campaigns can extend to Pinterest's visual search and shopping inventory.",
+      "Ads run in Pinterest's open-auction inventory across the home feed, search and related Pins.",
+      "No new buying tools are required: advertisers use their usual Microsoft buying and measurement workflows.",
+      "The integration starts in North America, Australia and New Zealand.",
+    ],
+    body="""
+<p>Pinterest announced on <strong>November 23, 2026</strong> a new integration with <strong>Microsoft Advertising</strong>. It lets Microsoft Advertising customers extend eligible campaigns to Pinterest's visual search and shopping inventory, without new buying tools.</p>
+
+<h2>How the integration works</h2>
+<ul>
+  <li><strong>Inventory:</strong> Pinterest's open-auction inventory across the <strong>home feed, search and related Pins</strong>.</li>
+  <li><strong>Bidding:</strong> Pinterest describes a custom contextual bidding model built on Pinterest search queries, contextual signals and first-party intent data.</li>
+  <li><strong>Buying:</strong> no new buying tools are needed. The integration runs on programmatic infrastructure, and advertisers use familiar buying and measurement workflows.</li>
+  <li><strong>Demand:</strong> comes from Microsoft's first-party ecosystem, which Pinterest lists as Bing, MSN, Xbox, Microsoft Casual Games and Microsoft Outlook.</li>
+  <li><strong>Markets:</strong> “The integration will be available in North America, Australia, and New Zealand to start.”</li>
+</ul>
+
+<h2>What Pinterest and Microsoft said</h2>
+<p>Jason Fairchild, GM of Programmatic and Affiliate at Pinterest: <em>“We're bringing premium inventory and Pinterest intent signals into the workflows advertisers already use.”</em></p>
+<p>Jason Mckay, general manager of Microsoft Advertising Global Partnerships, said the integration lets advertisers <em>“extend campaigns into Pinterest inventory using familiar buying and measurement workflows.”</em></p>
+
+<h2>Pinterest's audience numbers</h2>
+<div class="tbl"><table>
+  <thead><tr><th>Metric</th><th>Pinterest's figure</th></tr></thead>
+  <tbody>
+    <tr><td>Monthly active users</td><td>661 million</td></tr>
+    <tr><td>Monthly searches</td><td>80 billion, more than half with commercial intent</td></tr>
+    <tr><td>Unbranded text searches</td><td>More than 96%</td></tr>
+  </tbody>
+</table></div>
+
+<h2>What is not specified yet</h2>
+<ul>
+  <li><strong>Eligible campaign types:</strong> the announcement says “eligible Microsoft Advertising campaigns” but does not name which ones.</li>
+  <li><strong>Opt-in or opt-out:</strong> not addressed.</li>
+  <li><strong>Reporting:</strong> the announcement mentions familiar measurement tools, but no placement-level reporting details.</li>
+  <li><strong>Other markets:</strong> no dates beyond the starting markets.</li>
+</ul>
+""",
+    faq=[
+      ("Can Microsoft Ads campaigns run on Pinterest?",
+       "Yes. Pinterest and Microsoft Advertising announced an integration that lets eligible Microsoft Advertising campaigns extend to Pinterest's home feed, search and related Pins."),
+      ("Where is the Microsoft Advertising and Pinterest integration available?",
+       "In North America, Australia and New Zealand to start."),
+      ("Do I need a Pinterest Ads account or a new tool?",
+       "Pinterest says the integration works without requiring new buying tools, using familiar Microsoft buying and measurement workflows."),
+      ("Which Microsoft campaign types are eligible?",
+       "The announcement refers to “eligible Microsoft Advertising campaigns” without naming specific campaign types."),
+    ],
+    sources=[
+      ("Pinterest Newsroom: Pinterest and Microsoft Advertising integration (November 23, 2026)", "https://newsroom.pinterest.com/news/pinterest-microsoft-advertising-integration-2026/"),
+    ],
+  ),
+  dict(
     slug="youtube-shorts-ads-likes-engaged-view-conversions",
     date="2026-11-23",
     modified="2026-11-23",
