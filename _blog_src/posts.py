@@ -12,7 +12,7 @@ POSTS = [
     date="2026-11-24",
     modified="2026-11-24",
     platform="Microsoft Ads",
-    title="Microsoft Advertising campaigns can now run on Pinterest",
+    title="Microsoft Advertising campaigns are coming to Pinterest",
     seo_title="Microsoft Advertising x Pinterest Integration: Where Ads Run, Markets & Details",
     description="Pinterest and Microsoft Advertising announced an integration that lets eligible Microsoft Advertising campaigns extend to Pinterest's home feed, search and related Pins, starting in North America, Australia and New Zealand, without new buying tools.",
     image=None,
@@ -58,7 +58,7 @@ POSTS = [
 """,
     faq=[
       ("Can Microsoft Ads campaigns run on Pinterest?",
-       "Yes. Pinterest and Microsoft Advertising announced an integration that lets eligible Microsoft Advertising campaigns extend to Pinterest's home feed, search and related Pins."),
+       "Pinterest and Microsoft Advertising announced an integration that lets eligible Microsoft Advertising campaigns extend to Pinterest's home feed, search and related Pins. Pinterest says it will be available in North America, Australia and New Zealand to start."),
       ("Where is the Microsoft Advertising and Pinterest integration available?",
        "In North America, Australia and New Zealand to start."),
       ("Do I need a Pinterest Ads account or a new tool?",
