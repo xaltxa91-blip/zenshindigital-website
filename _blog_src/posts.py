@@ -40,9 +40,6 @@ POSTS = [
 <h2>ChatGPT's shopping results</h2>
 <p>Separately from the ads, Digiday reports that ChatGPT's shopping experience links to Amazon search results, drawing on third-party deal-tracking websites to identify products, discounts and up-to-date pricing.</p>
 
-<h2>What analysts say</h2>
-<p>Arielle Feger, senior analyst for commerce media and retail at eMarketer, told Digiday it “creates another opportunity to make money from advertising”, and that “for brands, that creates a risk of paying twice for the same customer.”</p>
-
 <h2>How ChatGPT ads can be bought</h2>
 <p>For more on buying options in ChatGPT, see our <a href="/chatgpt-ads.html">ChatGPT Ads page</a>.</p>
 """,
