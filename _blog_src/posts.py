@@ -8,6 +8,57 @@
 
 POSTS = [
   dict(
+    slug="amazon-black-friday-ads-chatgpt",
+    date="2026-11-25",
+    modified="2026-11-25",
+    platform="ChatGPT Ads",
+    title="Amazon is running Black Friday ads in ChatGPT",
+    seo_title="Amazon Runs Black Friday Ads in ChatGPT (US): Format & What's Unclear",
+    description="According to Digiday, Amazon is running a new round of Black Friday ads in ChatGPT in the US, in ChatGPT's standard ad format. It's unclear whether the ads were bought directly from OpenAI or through Amazon DSP.",
+    image=None,
+    takeaways=[
+      "Digiday reports that Amazon is running a new round of Black Friday ads in ChatGPT in the US.",
+      "The ads use ChatGPT's standard format, separate from the conversation, with a favicon, headline, description and “Learn more” button.",
+      "It's unclear whether Amazon bought them directly from OpenAI or through Amazon DSP.",
+      "Amazon and OpenAI declined to comment.",
+    ],
+    body="""
+<p>Amazon is running a new round of <strong>Black Friday ads in ChatGPT</strong> in the US, according to <strong>Digiday</strong>, which reported on <strong>November 24, 2026</strong> that it had seen the ads. Neither company has confirmed it: Amazon and OpenAI both declined to comment on Digiday's article.</p>
+
+<h2>What the ads look like</h2>
+<ul>
+  <li><strong>Format:</strong> the same format as typical ChatGPT ads, separate from the user conversation, with a favicon, headline, description and a “Learn more” call to action.</li>
+  <li><strong>Content:</strong> the ads promote Amazon Black Friday deals.</li>
+  <li><strong>Destination:</strong> they direct users to Amazon to complete their purchases.</li>
+  <li><strong>Market:</strong> the US.</li>
+</ul>
+
+<h2>How Amazon bought the ads is unclear</h2>
+<p>Digiday says it is unclear whether Amazon bought its ChatGPT ads <strong>directly from OpenAI</strong> or through its own <strong>Amazon DSP</strong>.</p>
+<p>In September, Amazon Ads announced a partnership that lets advertisers buy ChatGPT inventory through Amazon DSP. According to Digiday, the integration initially gives <strong>select US advertisers</strong> access to ChatGPT's ad inventory.</p>
+
+<h2>ChatGPT's shopping results</h2>
+<p>Separately from the ads, Digiday reports that ChatGPT's shopping experience links to Amazon search results, drawing on third-party deal-tracking websites to identify products, discounts and up-to-date pricing.</p>
+
+<h2>What analysts say</h2>
+<p>Arielle Feger, senior analyst for commerce media and retail at eMarketer, told Digiday it “creates another opportunity to make money from advertising”, and that “for brands, that creates a risk of paying twice for the same customer.”</p>
+
+<h2>How ChatGPT ads can be bought</h2>
+<p>For more on buying options in ChatGPT, see our <a href="/chatgpt-ads.html">ChatGPT Ads page</a>.</p>
+""",
+    faq=[
+      ("Is Amazon advertising in ChatGPT?",
+       "According to Digiday, which saw the ads, Amazon is running Black Friday ads in ChatGPT in the US. Amazon and OpenAI declined to comment."),
+      ("What do the Amazon ads in ChatGPT look like?",
+       "They use ChatGPT's standard ad format: separate from the conversation, with a favicon, headline, description and a “Learn more” call to action."),
+      ("Can advertisers buy ChatGPT ads through Amazon DSP?",
+       "Amazon Ads announced in September a partnership that initially gives select US advertisers access to ChatGPT's ad inventory through Amazon DSP."),
+    ],
+    sources=[
+      ("Digiday: Amazon is buying ChatGPT ads (November 24, 2026)", "https://digiday.com/marketing/amazon-is-buying-chatgpt-ads-while-blocking-openai-crawlers/"),
+    ],
+  ),
+  dict(
     slug="microsoft-advertising-pinterest-integration",
     date="2026-11-24",
     modified="2026-11-24",
