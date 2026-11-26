@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google Ads &amp; Meta Conversion Tracking with Claude (AI): What&#x27;s Possible in 2026 | Zenshin Digital</title>
-  <meta name="description" content="We successfully implemented Google Ads and Meta Ads conversion tracking with Claude. Here&#x27;s how Claude connects to Meta, Google Ads, GTM and GA4, what it can audit and build, and what to watch out for." />
-  <link rel="canonical" href="https://zenshindigital.com/blog/google-ads-meta-conversion-tracking-with-claude.html" />
-  <meta property="og:title" content="Google Ads &amp; Meta Conversion Tracking with Claude (AI): What&#x27;s Possible in 2026 | Zenshin Digital" />
-  <meta property="og:description" content="We successfully implemented Google Ads and Meta Ads conversion tracking with Claude. Here&#x27;s how Claude connects to Meta, Google Ads, GTM and GA4, what it can audit and build, and what to watch out for." />
-  <meta property="og:url" content="https://zenshindigital.com/blog/google-ads-meta-conversion-tracking-with-claude.html" />
+  <title>GTM Tracking Implementation with Claude: Google Ads, Meta &amp; GA4 (2026) | Zenshin Digital</title>
+  <meta name="description" content="We successfully implemented Google Tag Manager tracking for Google Ads, Meta, GA4 and more with Claude. Here&#x27;s how Claude connects to each platform, what it can audit and build, and what to watch out for." />
+  <link rel="canonical" href="https://zenshindigital.com/blog/gtm-tracking-implementation-with-claude.html" />
+  <meta property="og:title" content="GTM Tracking Implementation with Claude: Google Ads, Meta &amp; GA4 (2026) | Zenshin Digital" />
+  <meta property="og:description" content="We successfully implemented Google Tag Manager tracking for Google Ads, Meta, GA4 and more with Claude. Here&#x27;s how Claude connects to each platform, what it can audit and build, and what to watch out for." />
+  <meta property="og:url" content="https://zenshindigital.com/blog/gtm-tracking-implementation-with-claude.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://zenshindigital.com/blog/og/google-ads-meta-conversion-tracking-with-claude.png" />
+  <meta property="og:image" content="https://zenshindigital.com/blog/og/gtm-tracking-implementation-with-claude.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta name="twitter:image" content="https://zenshindigital.com/blog/og/google-ads-meta-conversion-tracking-with-claude.png" />
+  <meta name="twitter:image" content="https://zenshindigital.com/blog/og/gtm-tracking-implementation-with-claude.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
   <link rel="icon" type="image/svg+xml" href="/assets/brand/zenshin-icon-dark-bg.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Google Ads and Meta Ads conversion tracking with Claude: what's possible in 2026", "description": "We successfully implemented Google Ads and Meta Ads conversion tracking with Claude. Here's how Claude connects to Meta, Google Ads, GTM and GA4, what it can audit and build, and what to watch out for.", "datePublished": "2026-11-26", "dateModified": "2026-11-26", "image": ["https://zenshindigital.com/blog/og/google-ads-meta-conversion-tracking-with-claude.png"], "mainEntityOfPage": "https://zenshindigital.com/blog/google-ads-meta-conversion-tracking-with-claude.html", "author": {"@type": "Person", "name": "Xabier Urrutia", "url": "https://zenshindigital.com/#about"}, "publisher": {"@type": "Organization", "name": "Zenshin Digital", "url": "https://zenshindigital.com"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "GTM tracking for Google Ads, Meta, GA4 and more, implemented with Claude", "description": "We successfully implemented Google Tag Manager tracking for Google Ads, Meta, GA4 and more with Claude. Here's how Claude connects to each platform, what it can audit and build, and what to watch out for.", "datePublished": "2026-11-26", "dateModified": "2026-11-26", "image": ["https://zenshindigital.com/blog/og/gtm-tracking-implementation-with-claude.png"], "mainEntityOfPage": "https://zenshindigital.com/blog/gtm-tracking-implementation-with-claude.html", "author": {"@type": "Person", "name": "Xabier Urrutia", "url": "https://zenshindigital.com/#about"}, "publisher": {"@type": "Organization", "name": "Zenshin Digital", "url": "https://zenshindigital.com"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Claude set up Google Ads conversion tracking?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, through connectors. Google's official Google Ads API MCP server is read-only, so building conversion tracking requires connectors with write access to Google Tag Manager and Google Ads."}}, {"@type": "Question", "name": "Does Meta have an official connector for Claude?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Meta announced the open beta of its Meta Ads AI Connectors on April 29, 2026, for AI agents from Anthropic and OpenAI, covering reporting, campaign management, catalog management and signal diagnostics."}}, {"@type": "Question", "name": "Is there an official Google Ads connector in Claude's directory?", "acceptedAnswer": {"@type": "Answer", "text": "Not currently. Google publishes an open-source Google Ads API MCP server for developers, but Claude's connector directory has no first-party Google Ads, GA4 or Meta Ads connector."}}, {"@type": "Question", "name": "Is it safe to let AI change my tracking setup?", "acceptedAnswer": {"@type": "Answer", "text": "Keep changes in a GTM workspace draft, test them in Preview mode, and verify that conversions arrive correctly in each platform before and after publishing."}}]}</script>
 </head>
 <body class="light">
@@ -34,13 +34,13 @@
 <main class="bwrap art">
   <a class="back" href="/blog/">← All articles</a>
   <div class="meta"><span class="tag">Tracking</span><time datetime="2026-11-26">November 26, 2026</time><span></span><span>By Xabier Urrutia</span></div>
-  <h1>Google Ads and Meta Ads conversion tracking with Claude: what&#x27;s possible in 2026</h1>
-  <p class="lede">We successfully implemented Google Ads and Meta Ads conversion tracking with Claude. Here&#x27;s how Claude connects to Meta, Google Ads, GTM and GA4, what it can audit and build, and what to watch out for.</p>
-  <div class="takeaways"><h2>Key facts</h2><ul><li>We successfully implemented Google Ads and Meta Ads conversion tracking with Claude.</li><li>Meta offers official Ads AI Connectors for Claude, in open beta since April 29, 2026.</li><li>Google&#x27;s official Google Ads API MCP server is read-only, for analysis and diagnostics.</li><li>Google Tag Manager and GA4 connect through third-party connectors, since Claude&#x27;s directory has no first-party Google Ads, GA4 or Meta Ads connector.</li></ul></div>
+  <h1>GTM tracking for Google Ads, Meta, GA4 and more, implemented with Claude</h1>
+  <p class="lede">We successfully implemented Google Tag Manager tracking for Google Ads, Meta, GA4 and more with Claude. Here&#x27;s how Claude connects to each platform, what it can audit and build, and what to watch out for.</p>
+  <div class="takeaways"><h2>Key facts</h2><ul><li>We successfully implemented GTM tracking for Google Ads, Meta, GA4 and more with Claude.</li><li>Meta offers official Ads AI Connectors for Claude, in open beta since April 29, 2026.</li><li>Google&#x27;s official Google Ads API MCP server is read-only, for analysis and diagnostics.</li><li>Google Tag Manager and GA4 connect through third-party connectors, since Claude&#x27;s directory has no first-party Google Ads, GA4 or Meta Ads connector.</li></ul></div>
   
   <div class="content">
     
-<p>Conversion tracking is often the hardest part of paid media, and the place where small mistakes cost the most: wrong conversion values, sales counted twice, or tags firing before consent. We recently implemented <strong>Google Ads and Meta Ads conversion tracking with Claude</strong>, working in Google Tag Manager, Google Ads, Meta and GA4. The implementation was successful, and Claude caught a gap between the attribution setup and the live website code before the first sale came in.</p>
+<p>Conversion tracking is often the hardest part of paid media, and the place where small mistakes cost the most: wrong conversion values, sales counted twice, or tags firing before consent. We recently implemented <strong>Google Tag Manager (GTM) tracking for Google Ads, Meta, GA4 and more with Claude</strong>, working directly in GTM, Google Ads, Meta and GA4. The implementation was successful, and Claude caught a gap between the attribution setup and the live website code before the first sale came in.</p>
 <p>Here is what is possible today, based on the platforms' own announcements and documentation.</p>
 
 <h2>How Claude connects to ad platforms</h2>
