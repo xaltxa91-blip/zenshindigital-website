@@ -12,19 +12,19 @@ POSTS = [
     date="2026-11-26",
     modified="2026-11-26",
     platform="Tracking",
-    title="GTM tracking for Google Ads, Meta, GA4 and more, implemented with Claude",
-    seo_title="GTM Tracking Implementation with Claude: Google Ads, Meta & GA4 (2026)",
-    description="We successfully implemented Google Tag Manager tracking for Google Ads, Meta, GA4 and more with Claude. Here's how Claude connects to each platform, what it can audit and build, and what to watch out for.",
+    title="GTM tracking with Claude: Google Ads, Meta, GA4 and more",
+    seo_title="GTM Tracking with Claude: Google Ads, Meta & GA4 Conversion Setup (2026)",
+    description="How Claude can audit and build Google Tag Manager tracking for Google Ads, Meta, GA4 and more: how it connects to each platform, what it can do, what to watch out for, and what we learned from a recent implementation.",
     image=None,
     takeaways=[
-      "We successfully implemented GTM tracking for Google Ads, Meta, GA4 and more with Claude.",
+      "Claude can audit and build GTM tracking for Google Ads, Meta, GA4 and more, through connectors.",
       "Meta offers official Ads AI Connectors for Claude, in open beta since April 29, 2026.",
       "Google's official Google Ads API MCP server is read-only, for analysis and diagnostics.",
       "Google Tag Manager and GA4 connect through third-party connectors, since Claude's directory has no first-party Google Ads, GA4 or Meta Ads connector.",
     ],
     body="""
-<p>Conversion tracking is often the hardest part of paid media, and the place where small mistakes cost the most: wrong conversion values, sales counted twice, or tags firing before consent. We recently implemented <strong>Google Tag Manager (GTM) tracking for Google Ads, Meta, GA4 and more with Claude</strong>, working directly in GTM, Google Ads, Meta and GA4. The implementation was successful, and Claude caught a gap between the attribution setup and the live website code before the first sale came in.</p>
-<p>Here is what is possible today, based on the platforms' own announcements and documentation.</p>
+<p>Conversion tracking is one of the most error-prone parts of paid media: wrong conversion values, sales counted twice, or tags firing before consent. Small mistakes lead to budget decisions based on bad data.</p>
+<p>AI assistants such as <strong>Claude</strong> can now take on much of the repetitive work in <strong>Google Tag Manager (GTM)</strong> tracking for Google Ads, Meta, GA4 and other platforms. This guide covers how Claude connects to each platform, what it can audit and build, and what to watch out for, based on the platforms' own announcements and documentation.</p>
 
 <h2>How Claude connects to ad platforms</h2>
 <p>Claude connects to external tools through <strong>connectors</strong> built on the Model Context Protocol (MCP), an open standard that Anthropic launched in November 2024. Each platform is connected differently:</p>
@@ -51,6 +51,9 @@ POSTS = [
   <li><strong>Check:</strong> consent setup, duplicate events between platforms, and conversion values, currency and order IDs.</li>
   <li><strong>Clean up:</strong> find outdated or duplicate tags and triggers in old containers.</li>
 </ul>
+
+<h2>From our recent implementation</h2>
+<p>Zenshin Digital recently implemented a full GTM tracking setup for Google Ads, Meta and GA4 with Claude. The implementation was successful. One result stood out: by comparing the live website code with the planned attribution setup, Claude identified a gap and it was fixed before the first conversion was recorded.</p>
 
 <h2>What to watch out for</h2>
 <ul>
