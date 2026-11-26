@@ -15,7 +15,9 @@ POSTS = [
     title="GTM tracking for Google Ads, Meta, GA4 and more, implemented with Claude",
     seo_title="GTM Tracking Implementation with Claude: Google Ads, Meta & GA4 (2026)",
     description="We successfully implemented Google Tag Manager tracking for Google Ads, Meta, GA4 and more with Claude. Here's how Claude connects to each platform, what it can audit and build, and what to watch out for.",
-    image=None,
+    image="claude-tracking-post.png",
+    shot_label="Our test",
+    caption="Tracking set up with Claude: successful test",
     takeaways=[
       "We successfully implemented GTM tracking for Google Ads, Meta, GA4 and more with Claude.",
       "Meta offers official Ads AI Connectors for Claude, in open beta since April 29, 2026.",
