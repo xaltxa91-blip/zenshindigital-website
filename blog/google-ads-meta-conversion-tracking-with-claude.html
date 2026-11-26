@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Ads &amp; Meta Conversion Tracking with Claude (AI): What&#x27;s Possible in 2026 | Zenshin Digital</title>
+  <meta name="description" content="We successfully implemented Google Ads and Meta Ads conversion tracking with Claude. Here&#x27;s how Claude connects to Meta, Google Ads, GTM and GA4, what it can audit and build, and what to watch out for." />
+  <link rel="canonical" href="https://zenshindigital.com/blog/google-ads-meta-conversion-tracking-with-claude.html" />
+  <meta property="og:title" content="Google Ads &amp; Meta Conversion Tracking with Claude (AI): What&#x27;s Possible in 2026 | Zenshin Digital" />
+  <meta property="og:description" content="We successfully implemented Google Ads and Meta Ads conversion tracking with Claude. Here&#x27;s how Claude connects to Meta, Google Ads, GTM and GA4, what it can audit and build, and what to watch out for." />
+  <meta property="og:url" content="https://zenshindigital.com/blog/google-ads-meta-conversion-tracking-with-claude.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://zenshindigital.com/blog/og/google-ads-meta-conversion-tracking-with-claude.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://zenshindigital.com/blog/og/google-ads-meta-conversion-tracking-with-claude.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/blog/blog.css?v=130b3516" />
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/zenshin-icon-dark-bg.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Google Ads and Meta Ads conversion tracking with Claude: what's possible in 2026", "description": "We successfully implemented Google Ads and Meta Ads conversion tracking with Claude. Here's how Claude connects to Meta, Google Ads, GTM and GA4, what it can audit and build, and what to watch out for.", "datePublished": "2026-11-26", "dateModified": "2026-11-26", "image": ["https://zenshindigital.com/blog/og/google-ads-meta-conversion-tracking-with-claude.png"], "mainEntityOfPage": "https://zenshindigital.com/blog/google-ads-meta-conversion-tracking-with-claude.html", "author": {"@type": "Person", "name": "Xabier Urrutia", "url": "https://zenshindigital.com/#about"}, "publisher": {"@type": "Organization", "name": "Zenshin Digital", "url": "https://zenshindigital.com"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Claude set up Google Ads conversion tracking?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, through connectors. Google's official Google Ads API MCP server is read-only, so building conversion tracking requires connectors with write access to Google Tag Manager and Google Ads."}}, {"@type": "Question", "name": "Does Meta have an official connector for Claude?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Meta announced the open beta of its Meta Ads AI Connectors on April 29, 2026, for AI agents from Anthropic and OpenAI, covering reporting, campaign management, catalog management and signal diagnostics."}}, {"@type": "Question", "name": "Is there an official Google Ads connector in Claude's directory?", "acceptedAnswer": {"@type": "Answer", "text": "Not currently. Google publishes an open-source Google Ads API MCP server for developers, but Claude's connector directory has no first-party Google Ads, GA4 or Meta Ads connector."}}, {"@type": "Question", "name": "Is it safe to let AI change my tracking setup?", "acceptedAnswer": {"@type": "Answer", "text": "Keep changes in a GTM workspace draft, test them in Preview mode, and verify that conversions arrive correctly in each platform before and after publishing."}}]}</script>
+</head>
+<body class="light">
+<header class="bnav"><div class="bwrap bnav-in">
+  <a href="/" class="logo"><img class="logo-i" src="/assets/brand/zenshin-icon.svg" alt="" width="32" height="32">Zenshin Digital</a>
+  <nav><a href="/blog/">Blog</a><a href="/#about">About</a><a href="mailto:hello@zenshindigital.com?subject=Strategy%20call" class="btn">Book a Call</a></nav>
+</div></header>
+
+<main class="bwrap art">
+  <a class="back" href="/blog/">← All articles</a>
+  <div class="meta"><span class="tag">Tracking</span><time datetime="2026-11-26">November 26, 2026</time><span></span><span>By Xabier Urrutia</span></div>
+  <h1>Google Ads and Meta Ads conversion tracking with Claude: what&#x27;s possible in 2026</h1>
+  <p class="lede">We successfully implemented Google Ads and Meta Ads conversion tracking with Claude. Here&#x27;s how Claude connects to Meta, Google Ads, GTM and GA4, what it can audit and build, and what to watch out for.</p>
+  <div class="takeaways"><h2>Key facts</h2><ul><li>We successfully implemented Google Ads and Meta Ads conversion tracking with Claude.</li><li>Meta offers official Ads AI Connectors for Claude, in open beta since April 29, 2026.</li><li>Google&#x27;s official Google Ads API MCP server is read-only, for analysis and diagnostics.</li><li>Google Tag Manager and GA4 connect through third-party connectors, since Claude&#x27;s directory has no first-party Google Ads, GA4 or Meta Ads connector.</li></ul></div>
+  
+  <div class="content">
+    
+<p>Conversion tracking is often the hardest part of paid media, and the place where small mistakes cost the most: wrong conversion values, sales counted twice, or tags firing before consent. We recently implemented <strong>Google Ads and Meta Ads conversion tracking with Claude</strong>, working in Google Tag Manager, Google Ads, Meta and GA4. The implementation was successful, and Claude caught a gap between the attribution setup and the live website code before the first sale came in.</p>
+<p>Here is what is possible today, based on the platforms' own announcements and documentation.</p>
+
+<h2>How Claude connects to ad platforms</h2>
+<p>Claude connects to external tools through <strong>connectors</strong> built on the Model Context Protocol (MCP), an open standard that Anthropic launched in November 2024. Each platform is connected differently:</p>
+<div class="tbl"><table>
+  <thead><tr><th>Platform</th><th>Connection</th><th>Access</th></tr></thead>
+  <tbody>
+    <tr><td>Meta Ads</td><td>Meta's official Ads AI Connectors (open beta since April 29, 2026)</td><td>Reporting, campaign management, catalog management and signal diagnostics</td></tr>
+    <tr><td>Google Ads</td><td>Google's open-source Google Ads API MCP server (released October 7, 2025)</td><td>Read-only, for analysis and diagnostics</td></tr>
+    <tr><td>Google Tag Manager &amp; GA4</td><td>Third-party connectors</td><td>Depends on the connector: some can audit, build and clean up GTM containers</td></tr>
+  </tbody>
+</table></div>
+<p>Several guides note that Claude's connector directory currently has no first-party Google Ads, GA4 or Meta Ads connector. Meta's connector is added separately, and Google's MCP server is set up by developers.</p>
+
+<h2>Meta: official AI connectors</h2>
+<p>Meta announced the open beta of its <strong>Meta Ads AI Connectors</strong> on April 29, 2026, for AI agents from Anthropic (Claude) and OpenAI. They cover reporting, campaign management, catalog management and <strong>signal diagnostics</strong>: access to signal health and quality information, which helps prioritise Conversions API setup.</p>
+
+<h2>Google Ads: official MCP server, read-only</h2>
+<p>Google released the open-source <strong>Google Ads API MCP server</strong> on October 7, 2025. The initial version is <strong>read-only</strong>, designed for diagnostics and analytics: it can list accessible accounts and run Google Ads Query Language (GAQL) queries for campaign metrics, budgets and status. It cannot change accounts.</p>
+
+<h2>What Claude can do for tracking</h2>
+<ul>
+  <li><strong>Audit:</strong> review GTM containers, tags, triggers and variables, GA4 events and conversion setups across Google Ads and Meta.</li>
+  <li><strong>Build:</strong> with connectors that have write access, create GA4 events, GTM tags and triggers, Google Ads conversion tracking and Meta Pixel + Conversions API setups.</li>
+  <li><strong>Check:</strong> consent setup, duplicate events between platforms, and conversion values, currency and order IDs.</li>
+  <li><strong>Clean up:</strong> find outdated or duplicate tags and triggers in old containers.</li>
+</ul>
+
+<h2>What to watch out for</h2>
+<ul>
+  <li><strong>Check permissions:</strong> know whether a connector can only read data or can also make changes.</li>
+  <li><strong>Review before publishing:</strong> keep GTM changes in a workspace draft and test them in Preview mode before publishing.</li>
+  <li><strong>Verify after launch:</strong> confirm that conversions arrive in Google Ads, Meta Events Manager and GA4 with the right values.</li>
+  <li><strong>Consent and privacy:</strong> tracking still has to follow consent requirements and data processing agreements, whoever sets it up.</li>
+</ul>
+
+    <h2>FAQ</h2><div class="faq"><details><summary>Can Claude set up Google Ads conversion tracking?</summary><p>Yes, through connectors. Google&#x27;s official Google Ads API MCP server is read-only, so building conversion tracking requires connectors with write access to Google Tag Manager and Google Ads.</p></details><details><summary>Does Meta have an official connector for Claude?</summary><p>Yes. Meta announced the open beta of its Meta Ads AI Connectors on April 29, 2026, for AI agents from Anthropic and OpenAI, covering reporting, campaign management, catalog management and signal diagnostics.</p></details><details><summary>Is there an official Google Ads connector in Claude&#x27;s directory?</summary><p>Not currently. Google publishes an open-source Google Ads API MCP server for developers, but Claude&#x27;s connector directory has no first-party Google Ads, GA4 or Meta Ads connector.</p></details><details><summary>Is it safe to let AI change my tracking setup?</summary><p>Keep changes in a GTM workspace draft, test them in Preview mode, and verify that conversions arrive correctly in each platform before and after publishing.</p></details></div>
+    <div class="sources"><h2>Sources</h2><ul><li><a href="https://ppc.land/meta-opens-its-ad-system-to-claude-and-chatgpt-with-new-ai-connectors/" rel="noopener" target="_blank">PPC Land: Meta opens its ad system to Claude and ChatGPT with new AI connectors</a></li><li><a href="https://developers.google.com/ads/blog/posts/2025/10/open-source-google-ads-api-mcp-server" rel="noopener" target="_blank">Google Ads Developer Blog: Open Source Google Ads API MCP Server (October 7, 2025)</a></li><li><a href="https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server" rel="noopener" target="_blank">Google Ads API: Google Ads MCP server developer guide</a></li><li><a href="https://searchengineland.com/google-open-sources-ads-api-mcp-server-463219" rel="noopener" target="_blank">Search Engine Land: Google open-sources ads API MCP server</a></li></ul></div>
+  </div>
+  
+  <aside class="author">
+  <img src="/assets/img/xabier-urrutia.jpg" alt="Xabier Urrutia" width="72" height="72">
+  <div><strong>Xabier Urrutia</strong>
+  <span>Performance marketing &amp; growth, with experience at Google, Meta, GroupM and Semrush. $100M+ in ad spend managed across Google, Meta, Amazon, LinkedIn, TikTok and more.</span></div>
+</aside>
+  <section class="bcta">
+  <h2>Need help with your paid media?</h2>
+  <p>Book a free 30-minute strategy call. We'll review your current setup and identify quick wins.</p>
+  <a class="btn" href="mailto:hello@zenshindigital.com?subject=Strategy%20call">Book a Free Strategy Call</a>
+</section>
+  <section class="more"><h2>More paid media news</h2><a class="more-item" href="/blog/amazon-black-friday-ads-chatgpt.html"><span class="tag">ChatGPT Ads</span>Amazon is running Black Friday ads in ChatGPT</a><a class="more-item" href="/blog/microsoft-advertising-pinterest-integration.html"><span class="tag">Microsoft Ads</span>Microsoft Advertising campaigns are coming to Pinterest</a><a class="more-item" href="/blog/youtube-shorts-ads-likes-engaged-view-conversions.html"><span class="tag">Google Ads</span>YouTube Shorts ads: a like, comment or share now counts for engaged-view conversions</a></section>
+</main>
+<footer class="bfoot"><div class="bwrap">
+  <span>© 2026 Zenshin Digital</span>
+  <span><a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/privacy.html">Privacy Policy</a></span>
+</div></footer>
+</body></html>

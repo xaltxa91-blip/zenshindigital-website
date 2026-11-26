@@ -8,6 +8,76 @@
 
 POSTS = [
   dict(
+    slug="google-ads-meta-conversion-tracking-with-claude",
+    date="2026-11-26",
+    modified="2026-11-26",
+    platform="Tracking",
+    title="Google Ads and Meta Ads conversion tracking with Claude: what's possible in 2026",
+    seo_title="Google Ads & Meta Conversion Tracking with Claude (AI): What's Possible in 2026",
+    description="We successfully implemented Google Ads and Meta Ads conversion tracking with Claude. Here's how Claude connects to Meta, Google Ads, GTM and GA4, what it can audit and build, and what to watch out for.",
+    image=None,
+    takeaways=[
+      "We successfully implemented Google Ads and Meta Ads conversion tracking with Claude.",
+      "Meta offers official Ads AI Connectors for Claude, in open beta since April 29, 2026.",
+      "Google's official Google Ads API MCP server is read-only, for analysis and diagnostics.",
+      "Google Tag Manager and GA4 connect through third-party connectors, since Claude's directory has no first-party Google Ads, GA4 or Meta Ads connector.",
+    ],
+    body="""
+<p>Conversion tracking is often the hardest part of paid media, and the place where small mistakes cost the most: wrong conversion values, sales counted twice, or tags firing before consent. We recently implemented <strong>Google Ads and Meta Ads conversion tracking with Claude</strong>, working in Google Tag Manager, Google Ads, Meta and GA4. The implementation was successful, and Claude caught a gap between the attribution setup and the live website code before the first sale came in.</p>
+<p>Here is what is possible today, based on the platforms' own announcements and documentation.</p>
+
+<h2>How Claude connects to ad platforms</h2>
+<p>Claude connects to external tools through <strong>connectors</strong> built on the Model Context Protocol (MCP), an open standard that Anthropic launched in November 2024. Each platform is connected differently:</p>
+<div class="tbl"><table>
+  <thead><tr><th>Platform</th><th>Connection</th><th>Access</th></tr></thead>
+  <tbody>
+    <tr><td>Meta Ads</td><td>Meta's official Ads AI Connectors (open beta since April 29, 2026)</td><td>Reporting, campaign management, catalog management and signal diagnostics</td></tr>
+    <tr><td>Google Ads</td><td>Google's open-source Google Ads API MCP server (released October 7, 2025)</td><td>Read-only, for analysis and diagnostics</td></tr>
+    <tr><td>Google Tag Manager &amp; GA4</td><td>Third-party connectors</td><td>Depends on the connector: some can audit, build and clean up GTM containers</td></tr>
+  </tbody>
+</table></div>
+<p>Several guides note that Claude's connector directory currently has no first-party Google Ads, GA4 or Meta Ads connector. Meta's connector is added separately, and Google's MCP server is set up by developers.</p>
+
+<h2>Meta: official AI connectors</h2>
+<p>Meta announced the open beta of its <strong>Meta Ads AI Connectors</strong> on April 29, 2026, for AI agents from Anthropic (Claude) and OpenAI. They cover reporting, campaign management, catalog management and <strong>signal diagnostics</strong>: access to signal health and quality information, which helps prioritise Conversions API setup.</p>
+
+<h2>Google Ads: official MCP server, read-only</h2>
+<p>Google released the open-source <strong>Google Ads API MCP server</strong> on October 7, 2025. The initial version is <strong>read-only</strong>, designed for diagnostics and analytics: it can list accessible accounts and run Google Ads Query Language (GAQL) queries for campaign metrics, budgets and status. It cannot change accounts.</p>
+
+<h2>What Claude can do for tracking</h2>
+<ul>
+  <li><strong>Audit:</strong> review GTM containers, tags, triggers and variables, GA4 events and conversion setups across Google Ads and Meta.</li>
+  <li><strong>Build:</strong> with connectors that have write access, create GA4 events, GTM tags and triggers, Google Ads conversion tracking and Meta Pixel + Conversions API setups.</li>
+  <li><strong>Check:</strong> consent setup, duplicate events between platforms, and conversion values, currency and order IDs.</li>
+  <li><strong>Clean up:</strong> find outdated or duplicate tags and triggers in old containers.</li>
+</ul>
+
+<h2>What to watch out for</h2>
+<ul>
+  <li><strong>Check permissions:</strong> know whether a connector can only read data or can also make changes.</li>
+  <li><strong>Review before publishing:</strong> keep GTM changes in a workspace draft and test them in Preview mode before publishing.</li>
+  <li><strong>Verify after launch:</strong> confirm that conversions arrive in Google Ads, Meta Events Manager and GA4 with the right values.</li>
+  <li><strong>Consent and privacy:</strong> tracking still has to follow consent requirements and data processing agreements, whoever sets it up.</li>
+</ul>
+""",
+    faq=[
+      ("Can Claude set up Google Ads conversion tracking?",
+       "Yes, through connectors. Google's official Google Ads API MCP server is read-only, so building conversion tracking requires connectors with write access to Google Tag Manager and Google Ads."),
+      ("Does Meta have an official connector for Claude?",
+       "Yes. Meta announced the open beta of its Meta Ads AI Connectors on April 29, 2026, for AI agents from Anthropic and OpenAI, covering reporting, campaign management, catalog management and signal diagnostics."),
+      ("Is there an official Google Ads connector in Claude's directory?",
+       "Not currently. Google publishes an open-source Google Ads API MCP server for developers, but Claude's connector directory has no first-party Google Ads, GA4 or Meta Ads connector."),
+      ("Is it safe to let AI change my tracking setup?",
+       "Keep changes in a GTM workspace draft, test them in Preview mode, and verify that conversions arrive correctly in each platform before and after publishing."),
+    ],
+    sources=[
+      ("PPC Land: Meta opens its ad system to Claude and ChatGPT with new AI connectors", "https://ppc.land/meta-opens-its-ad-system-to-claude-and-chatgpt-with-new-ai-connectors/"),
+      ("Google Ads Developer Blog: Open Source Google Ads API MCP Server (October 7, 2025)", "https://developers.google.com/ads/blog/posts/2025/10/open-source-google-ads-api-mcp-server"),
+      ("Google Ads API: Google Ads MCP server developer guide", "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server"),
+      ("Search Engine Land: Google open-sources ads API MCP server", "https://searchengineland.com/google-open-sources-ads-api-mcp-server-463219"),
+    ],
+  ),
+  dict(
     slug="amazon-black-friday-ads-chatgpt",
     date="2026-11-25",
     modified="2026-11-25",
