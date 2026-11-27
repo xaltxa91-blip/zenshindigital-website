@@ -8,6 +8,78 @@
 
 POSTS = [
   dict(
+    slug="chatgpt-ads-reach-frequency-metrics",
+    date="2026-11-27",
+    modified="2026-11-27",
+    platform="ChatGPT Ads",
+    title="ChatGPT Ads now reports Reach & Frequency, plus 7 more audience metrics",
+    seo_title="ChatGPT Ads Reach & Frequency: 9 New Audience Metrics in Ads Manager (Nov 2026)",
+    description="OpenAI added Reach, Frequency and 7 more audience metrics to ChatGPT Ads Manager and the Ads API. The same update adds a default “Learn more” link to single-image ads, Business Agents outside the US and an option to hide sale prices.",
+    image=None,
+    takeaways=[
+      "ChatGPT Ads Manager and the Ads API now report Reach and Frequency, plus 7 related audience metrics.",
+      "Reach estimates unique people who saw an ad at least once. Frequency is total impressions divided by Reach.",
+      "Single-image ads now show a “Learn more” link by default.",
+      "Business Agents are open to eligible businesses in supported markets outside the US.",
+    ],
+    body="""
+<p>OpenAI sent ChatGPT advertisers a <strong>“ChatGPT Ads Product Update”</strong> email on <strong>November 25, 2026</strong>, first reported by Search Engine Roundtable. The biggest change: <strong>Reach and Frequency</strong> reporting in Ads Manager and the Ads API.</p>
+
+<h2>Reach and Frequency</h2>
+<ul>
+  <li><strong>Reach:</strong> for the selected date range, estimates how many unique people saw your ads at least once.</li>
+  <li><strong>Frequency:</strong> estimates how many times those people saw your ads on average, calculated as total impressions divided by Reach for the same period.</li>
+</ul>
+
+<h2>The 7 other new audience metrics</h2>
+<div class="tbl"><table>
+  <thead><tr><th>Metric</th></tr></thead>
+  <tbody>
+    <tr><td>Click Reach</td></tr>
+    <tr><td>Click Frequency</td></tr>
+    <tr><td>Total Reach</td></tr>
+    <tr><td>Total Frequency</td></tr>
+    <tr><td>Unique CTR</td></tr>
+    <tr><td>Unique CPC</td></tr>
+    <tr><td>Cost per 1,000 Reached</td></tr>
+  </tbody>
+</table></div>
+<p>OpenAI named these metrics in the email but did not define them.</p>
+
+<h2>How to add the metrics in Ads Manager</h2>
+<ol>
+  <li>Open your ChatGPT Ads Manager report and click <strong>Edit columns</strong>.</li>
+  <li>Select the metrics under <strong>Ad Viewers</strong>.</li>
+  <li>Click <strong>Save changes</strong>.</li>
+</ol>
+<p>The metrics are also available in the Ads API.</p>
+
+<h2>Other changes in the update</h2>
+<ul>
+  <li><strong>“Learn more” link:</strong> single-image ads now show a “Learn more” link below the description by default. It opens the landing page already set in Ads Manager, so no extra setup is needed.</li>
+  <li><strong>Business Agents outside the US:</strong> eligible ecommerce and online service businesses in supported non-US markets can create and publish a Business Agent in the ChatGPT Business Hub, and add it to a campaign as a Sponsored Business Agent. OpenAI did not name the markets.</li>
+  <li><strong>Hide sale prices:</strong> for product-feed ad groups, advertisers can hide sale prices in Ads Manager, so the regular price shows again after a promotion ends.</li>
+  <li><strong>Policy Center details:</strong> review messages for rejected ads now show more context on which policy applies. OpenAI said its ad approval guidelines have not changed.</li>
+</ul>
+
+<p>For more on how ChatGPT ads are bought and measured, see our <a href="/chatgpt-ads.html">ChatGPT Ads page</a>.</p>
+""",
+    faq=[
+      ("Does ChatGPT Ads report reach and frequency?",
+       "Yes. Since OpenAI's November 25, 2026 update, Ads Manager and the Ads API report Reach and Frequency, plus 7 related audience metrics."),
+      ("How is Frequency calculated in ChatGPT Ads?",
+       "Frequency is total impressions divided by Reach for the same reporting period."),
+      ("How do I add Reach and Frequency columns in ChatGPT Ads Manager?",
+       "Click Edit columns, select the metrics under Ad Viewers, then click Save changes."),
+      ("Do single-image ChatGPT ads have a call-to-action?",
+       "Yes. Single-image ads now show a “Learn more” link by default, which opens the landing page set in Ads Manager."),
+    ],
+    sources=[
+      ("Search Engine Roundtable: ChatGPT Ads new call-to-actions, Business Agents expand, more audience metrics (November 25, 2026)", "https://www.seroundtable.com/chatgpt-ads-updates-42623.html"),
+      ("PPC Land: ChatGPT ad reports add 9 metrics built on how many people see the ads", "https://ppc.land/chatgpt-ad-reports-add-9-metrics-built-on-how-many-people-see-the-ads/"),
+    ],
+  ),
+  dict(
     slug="gtm-tracking-implementation-with-claude",
     date="2026-11-26",
     modified="2026-11-26",
